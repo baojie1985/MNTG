@@ -1,0 +1,30 @@
+! limits for input fields
+MIN_MAXTIME = 1
+MAX_MAXTIME = 5000
+MAX_OBJCLASSES = 20
+MAX_OBJPERTIME = 1000
+MAX_OBJBEGIN = 100000
+MAX_EXTOBJCLASSES = 10
+MAX_EXTOBJPERTIME = 3
+MAX_EXTOBJBEGIN = 10
+
+! setting of the generator
+!urlnez = file:/C:/Lokal/FH/Forschung/Projekte/Generator2/data/tiger/Tgr06077-1
+!urlnez = C:\\Daten\\ST_Testdaten\\tiger\\TGR06077-1
+!urlne = D:\\TrafficGenerator\\tl_2010_27003_roads\\tl_2010_27003_roads
+outputFile = /home/yackel/TrafficGenerator/output.txt
+
+!DSO
+VIZ
+!setting of the applet
+baseScaleFactor = 250
+maxScale = 10
+minScale = 163840
+scale = 5120
+viewWidth = 650
+viewHeight = 500
+language = E
+color = white
+mapColor = white
+mapWidth = 115000000
+mapHeight = 75000000

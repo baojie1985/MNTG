@@ -1,0 +1,1435 @@
+@string{VLDB="Proceedings of the International Conference on Very Large Data Bases, VLDB"}
+@string{SIGMOD="Proceedings of the ACM International Conference on Management of Data, SIGMOD"}
+@string{PODS="Proceedings of the ACM Symposium on Principles of Database Systems, PODS"}
+@string{ICDE="Proceedings of the IEEE International Conference on Data Engineering, ICDE"}
+@string{EDBT="Proceedings of the International Conference on Extending Database Technology, EDBT"}
+@string{CIDR="Proceedings of the International Conference on Innovative Data Systems Research, CIDR"}
+@string{TODS="ACM Transactions on Database Systems, TODS"}
+@string{TKDE="IEEE Transactions on Knowledge and Data Engineering, TKDE"}
+@string{SSD="Proceedings of the International Symposium on Advances in Spatial Databases, SSD"}
+@string{SSTD="Proceedings of the International Symposium on Advances in Spatial and Temporal Databases, SSTD"}
+@string{CIKM="Proceedings of the ACM International Conference on Information and Knowledge Managemen, CIKM"}
+@string{GIS="Proceedings of the ACM Symposium on Advances in Geographic Information Systems, ACM GIS"}
+@string{SSDBM="Proceedings of the International Conference on Scientific and Statistical Database Management, SSDBM"}
+@string{DEBull="IEEE Data Engineering Bulletin"}
+@string{IDEAS="Proceedings of the International Database Engineering and Applications Symposium, IDEAS"}
+@string{MDM="Proceedings of the International Conference on Mobile Data Management, MDM"}
+@string{DASFAA="Proceedings of the International Conference on Database Systems for Advanced Applications, DASFAA"}
+@string{CHI="Proceedings of the International Conference on Human Factors in Computing Systems, CHI"}
+
+
+@string{SIGMOD="SIGMOD"}
+@string{VLDB="VLDB"}
+@string{ICDE="ICDE"}
+@string{PODS="PODS"}
+@string{EDBT="EDBT"}
+@string{DEBull="IEEE Data Engineering Bulletin"}
+@string{SSDBM="SSDBM"}
+@string{CIKM="CIKM"}
+@string{TKDE="TKDE"}
+@string{TODS="TODS"}
+@string{SSTD="SSTD"}
+@string{SSD="SSD"}
+@string{GIS="GIS"}
+@string{IDEAS="IDEAS"}
+@string{CIDR="CIDR"}
+@string{MDM="MDM"}
+@string{DASFAA="DASFAA"}
+@string{CHI="CHI"}
+
+
+@MISC{web:Facebook,
+    TITLE        =  {{Facebook}},
+    KEY =   {Facebook},
+    HOWPUBLISHED  =  {http://www.facebook.com/}
+}
+@MISC{web:FoursquareStat,
+    TITLE        =  {{FourSquare Statistics}},
+    KEY =   {FourSquare Statistics},
+    HOWPUBLISHED  =  {https://foursquare.com/infographics/10million}
+}
+
+
+@MISC{web:SinaWeibo,
+    TITLE        =  {{Sina Weibo}},
+    KEY =   {Sina Weibo},
+    HOWPUBLISHED  =  {http://t.sina.com.cn/}
+}
+@MISC{web:Renren,
+    TITLE        =  {{Renren}},
+    KEY =   {Renren},
+    HOWPUBLISHED  =  {http://www.renren.com/}
+}
+
+@MISC{web:Twinkle,
+    TITLE        =  {{Twinkle}},
+    KEY =   {Twinkle},
+    HOWPUBLISHED  =  {http://tapulous.com/twinkle/}
+}
+
+
+
+@MISC{web:Twitter,
+    TITLE        =  {{Twitter}},
+    KEY     ={Twitter},
+    HOWPUBLISHED  =  {http://www.twitter.com/}
+}
+
+@MISC{web:iGoogle,
+    TITLE        =  {{iGoogle}},
+    KEY     ={iGoogle},
+    HOWPUBLISHED  =  {http://www.google.com/ig}
+}
+
+@MISC{web:MyYahoo!,
+    TITLE        =  {{MyYahoo!}},
+    KEY     ={MyYahoo!},
+    HOWPUBLISHED  =  {http://my.yahoo.com/}
+}
+
+@inproceedings{STC+10,
+  author    = {Adam Silberstein and Jeff Terrace and Brian F. Cooper and Raghu Ramakrishnan},
+  title     = {{Feeding Frenzy: Selectively Materializing User's Event Feed}},
+  booktitle = SIGMOD,
+  year      = {2010},
+  location   = {Indianapolis, IN},
+  pages     = {831-842}
+}
+
+@inproceedings{XCY+12,
+  author    = {Wenjian Xu and Chi-Yin Chow and Man Lung Yiu and Qing Li and Chung Keung Poon},
+  title     = {{MobiFeed: A Location-Aware News Feed System for Mobile Users}},
+  booktitle = {SIGSPATIAL},
+  year      = {2012},
+  location   = {Redondo Beach, CA}
+}
+
+
+@inproceedings{TLP+08,
+  title={{NewsStand: a new view on news}},
+  author={Benjamin E. Teitler and Michael D. Lieberman and Daniele Panozzo and Jagan Sankaranarayanan and Hanan Samet and Jon Sperling},
+  booktitle={SIGSPATIAL},
+  pages={18},
+  year={2008},
+  location={Irvine, CA}
+}
+
+@inproceedings{BG04,
+  title={{Multi-objective Query Processing for Database Systems}},
+  author={Wolf-Tilo Balke and Ulrich Guntzer},
+  booktitle={VLDB},
+  pages={936--947},
+  year={2004},
+  location={Toronto, Canada}
+}
+
+@inproceedings{KML08,
+  title={{Skyline Query Processing for Incomplete Data}},
+  author={Mohamed E Khalefa and Mohamed F. Mokbel and Justin J Levandoski},
+  booktitle={ICDE},
+  pages={556--565},
+  year={2008},
+  location={Cancun, Mexico}
+}
+@inproceedings{XZY+08,
+  title={{On Skylining with Flexible Dominance Relation}},
+  author={Tian Xia and Donghui Zhang and Yufei Tao },
+  booktitle={ICDE},
+  pages={1397--1399},
+  year={2008},
+  location={Cancun, Mexico}
+}
+
+@inproceedings{LYZ+07,
+  title={{Selecting Stars: The k Most Representative Skyline Operator}},
+  author={Xuemin Lin and Yidong Yuan and Qing Zhang and Ying Zhang},
+  booktitle={ICDE},
+  pages={86--95},
+  year={2007},
+  location={Istanbul, Turkey}
+}
+
+
+@inproceedings{TDL+09,
+  title={{Distance-based Representative Skyline}},
+  author={Yufei Tao and Ling Ding and Xuemin Lin and Jian Pei},
+  booktitle={ICDE},
+  pages={892--903},
+  year={2009},
+  location={Shanghai, China}
+}
+
+
+@inproceedings{YM07,
+  title={{Efficient Processing of Top-k Dominating Queries on Multi-Dimensional Data}},
+  author={Man Lung Yiu and Nikos Mamoulis},
+  booktitle={VLDB},
+  pages={483--494},
+  year={2007},
+  location={Vienna, Austria}
+}
+
+@article{CJT+06a,
+  title={On high dimensional skylines},
+  author={Chee-Yong Chan and H.V. Jagadish  Kian-Lee Tan and Anthony K.H. Tung and Zhenjie Zhang},
+  journal={EDBT},
+  pages={478--495},
+  year={2006},
+  publisher={Springer}
+}
+
+@inproceedings{CJT+06,
+  title={{Finding k-Dominant Skylines in High Dimensional Space}},
+  author={Chee-Yong Chan and H.V. Jagadish  Kian-Lee Tan and Anthony K.H. Tung and Zhenjie Zhang},
+  booktitle={SIGMOD},
+  pages={503--514},
+  year={2006},
+  location={Chicago, Illinois}
+}
+
+@inproceedings{KRR02,
+  title={{Shooting Stars in the Sky: An Online Algorithm for Skyline Queries}},
+  author={Donald Kossmann and Frank Ramsak and Steffen Rost},
+  booktitle={VLDB},
+  pages={275--286},
+  year={2002},
+  location={Hongkong, China}
+}
+
+@inproceedings{CGG+03,
+  title={Skyline with presorting},
+  author={Jan Chomicki and Parke Godfrey and Jarek Gryz and Dongming Liang},
+  booktitle={ICDE},
+  pages={717--719},
+  year={2003},
+  location={ Bangalore, India}
+}
+
+@inproceedings{QSS+10,
+  title={Determining the spatial reader scopes of news sources using local lexicons},
+  author={Gianluca Quercini and Hanan Samet and Jagan Sankaranarayanan and Michael D. Lieberman},
+  booktitle={SIGSPATIAL},
+  pages={43--52},
+  year={2010},
+  location={San Jose, CA}
+}
+
+@inproceedings{DGF05,
+  title={{Ranking a stream of news}},
+  author={Gianna M. Del Corso and Antonio Gull and Francesco Romani},
+  booktitle={WWW},
+  pages={97--106},
+  year={2005},
+  location={Chiba, Japan}
+}
+
+@inproceedings{DDG+07,
+  title={Google news personalization: scalable online collaborative filtering},
+  author={Abhinandan Das and Mayur Datar and Ashutosh Garg and Shyam Rajaram.},
+  booktitle={WWW},
+  pages={271--280},
+  year={2007},
+  location={Banff, Alberta, Canada.}
+}
+
+@inproceedings{GSH04,
+  title={{Newsjunkie: providing personalized newsfeeds via analysis of information novelty}},
+  author={Evgeniy Gabrilovich and Susan Dumais and Eric Horvitz},
+  booktitle={WWW},
+  pages={482--490},
+  year={2004},
+  location={New York, NY}
+}
+
+@article{CJW09,
+  title={Efficient retrieval of the top-k most relevant spatial web objects},
+  author={Cong, G. and Jensen, C.S. and Wu, D.},
+  journal={Proceedings of the VLDB Endowment},
+  volume={2},
+  number={1},
+  pages={337--348},
+  year={2009},
+  publisher={VLDB Endowment}
+}
+
+
+@inproceedings{MLY10,
+  title={{Preference Queries in Large Multi-Cost Transportation Networks}},
+  author={Kyriakos Mouratidis and Yimin Lin and Man Lung Yiu},
+  booktitle={ICDE},
+  pages={533--544},
+  year={2010},
+location={Long Beach, California},
+date={March}
+}
+
+@article{YLM+10,
+  title={{Ranking Spatial Data by Quality Preferences}},
+  author={Man Lung Yiu and Hua Lu and Nikos Mamoulis and Michail Vaitis},
+  journal={TKDE},
+  number={99},
+  pages={1--1},
+  year={2010}
+}
+
+@article{IBS08,
+  title={{A Survey of Top-k Query Processing Techniques in Relational Database Systems}},
+  author={Ihab F. Ilyas and George Beskales and Mohamed A. Soliman},
+  journal={ACM Computing Surveys},
+  volume={40},
+  number={4},
+  pages={11},
+  year={2008},
+  publisher={ACM}
+}
+
+@inproceedings{MBP06,
+  title={{Continuous Monitoring of Top-k Queries over Sliding Windows}},
+  author={Kyriakos Mouratidis and Spiridon Bakiras and Dimitris Papadias},
+  booktitle={SIGMOD},
+  pages={635--646},
+  year={2006},
+  location={Chicago, Illinois},
+  date={June}
+}
+
+
+@inproceedings{YAY12,
+  title={{Processing a Large Number of Continuous Preference Top-k Queries}},
+  author={Albert Yu and Pankaj K. Agarwal and Jun Yang},
+  booktitle={SIGMOD},
+  pages={397--408},
+  year={2012},
+  location={Scottsdale,AZ},
+  data={May}
+}
+
+@inproceedings{CBM10,
+  author    = {Chi-Yin Chow and Jie Bao and Mohamed F. Mokbel},
+  title     = {{Towards Location-based Social Networking Services}},
+  booktitle = {The 2nd ACM SIGSPATIAL International Workshop on Location Based Social Networks},
+  year      = {2010},
+  comment     =  {31-38},
+  location   = {San Jose, CA}
+}
+
+
+@inproceedings{BMC12,
+  author    = {Jie Bao and and Mohamed F. Mokbel and Chi-Yin Chow },
+  title     = {{GeoFeed: A Location-aware News Feed System}},
+  booktitle = {ICDE},
+  year      = {2012},
+  pages={54--65},
+  data ={Apr.},
+  location={Arlington, VA}
+  }
+
+
+
+@inproceedings{ZCX+09,
+  author    = {Yu Zheng and Yukun Chen and Xing Xie and Wei-Ying Ma},
+  title     = {{GeoLife2.0: A Location-Based Social Networking Service}},
+  booktitle = {MDM},
+  year      = {2009},
+  location   = {Taipei, Taiwan},
+  comment     = {357-358}
+}
+
+@inproceedings{RAD03,
+  author    = {Matthew Richardson and
+               Rakesh Agrawal and
+               Pedro Domingos},
+  title     = {{Trust Management for the Semantic Web}},
+  booktitle = {International Semantic Web Conference},
+  year      = {2003},
+  comment     = {351-368},
+  location   = {Sanibel Island, FL},
+}
+
+
+@article{YX11,
+  title={{Learning travel recommendations from user-generated GPS traces}},
+  author={Zheng, Yu and Xie, Xing},
+  journal={ACM Transactions on Intelligent Systems and Technology (TIST)},
+  volume={2},
+  number={1},
+  pages={2},
+  issn={2157-6904},
+  year={2011},
+  publisher={ACM}
+}
+
+
+
+@MISC{website:facebookstatics,
+    TITLE        =  {{Facebook Statistics}},
+    YEAR          =  {2010},
+    KEY =   {Facebook},
+    HOWPUBLISHED  =  {http://www.facebook.com/press/info.php?statistics}
+}
+
+
+@MISC{software:Postgresql,
+    TITLE        =  {{PostgreSQL }},
+    KEY =   {PostgreSQL},
+    HOWPUBLISHED  =  {www.postgresql.org}
+}
+
+
+
+
+@MISC{website:FourSquare,
+    TITLE        =  {{FourSquare}},
+    KEY ={FourSquare},
+    HOWPUBLISHED  =  {http://www.foursquare.com/}
+}
+
+
+
+
+@MISC{website:snap:stanford,
+    TITLE        =  {{Stanford large network dataset collection}},
+    KEY ={SNAP},
+    HOWPUBLISHED  =  {http://snap.stanford.edu/data/index.html}
+}
+
+
+@article{MT90,
+  author    = {Silvano Martello and Paolo Toth},
+  title     = {Lower bounds and reduction procedures for the bin packing problem},
+  journal   = {Discrete Applied Mathematics},
+  volume    = {28},
+  number    = {1},
+  year      = {1990},
+  comment     = {59-70}
+}
+
+@inproceedings{GM99,
+  author    = {Himanshu Gupta and Inderpal Singh Mumick},
+  title     = {{Selection of Views to Materialize Under a Maintenance Cost Constraint}},
+  booktitle = {ICDT},
+  year      = {1999},
+  comment     = {453-470},
+  location   = {Jerusalem, Israel},
+}
+
+
+@book{z49,
+  author    = {George Kingsley Zipf},
+  title     = {{Human Behaviour and the Principle of Least Effort: an Introduction to Human Ecology}},
+  publisher = {Addison-Wesley},
+  year      = {1949}
+}
+
+
+
+@inproceedings{TCX+05,
+  author    = {Yufei Tao and Reynold Cheng and Xiaokui Xiao and Wang Kay Ngai and Ben Kao and Sunil Prabhakar},
+  title     = {{Indexing Multi-Dimensional Uncertain Data with Arbitrary Probability Density Functions}},
+  booktitle = {VLDB},
+  year      = {2005},
+  comment     = {922-933},
+  location   = {Trondheim, Norway}
+}
+
+@inproceedings{CXP+05,
+  author    = {Reynold Cheng and Yuni Xia and Sunil Prabhakar and Rahul Shah},
+  title     = {{Change Tolerant Indexing for Constantly Evolving Data}},
+  booktitle = {ICDE},
+  year      = {2005},
+  comment     = {391-402},
+  location   = {Tokyo, Japan}
+}
+
+
+
+@article{MA08,
+  author    = {Mohamed F. Mokbel and Walid G. Aref},
+  title     ={{SOLE: scalable on-line execution of continuous queries on spatio-temporal data streams}},
+  journal   = {VLDB J.},
+  volume    = {17},
+  number    = {5},
+  year      = {2008},
+  comment     = {971-995}
+}
+
+@inproceedings{YYL10,
+  title={{Location Recommendation for Location-based Social Networks}},
+  author={Mao Ye and Peifeng Yin. and Wang-Chien Lee},
+  booktitle={SIGSPATAIL},
+  pages={458--461},
+  year={2010},
+  location={San Jose, CA},
+  date={Nov}
+}
+
+
+@article{PHC07,
+  title={{Location-based recommendation system using bayesian user¡¯s preference model in mobile devices}},
+  author={Park, M.H. and Hong, J.H. and Cho, S.B.},
+  journal={Ubiquitous Intelligence and Computing},
+  pages={1130--1139},
+  year={2007},
+  publisher={Springer}
+}
+
+
+@inproceedings{L07,
+  author    = {Gang Luo},
+  title     = {{Partial Materialized Views}},
+  booktitle = {ICDE},
+  year      = {2007},
+  comment     = {756-765},
+  location   = {Istanbul, Turkey}
+}
+
+
+
+
+@inproceedings{LHK10,
+  author    = {Jure Leskovec and Daniel P. Huttenlocher and Jon M. Kleinberg},
+  title     = {{Predicting positive and negative links in online social networks}},
+  booktitle = {WWW},
+  year      = {2010},
+  comment     = {641-650},
+  location   = {Raleigh, NC}
+}
+
+
+@inproceedings{BHK+06,
+  author    = {Lars Backstrom and Daniel P. Huttenlocher and Jon M. Kleinberg and Xiangyang Lan},
+  title     = {{Group formation in large social networks: membership, growth,and evolution}},
+  booktitle = {KDD},
+  year      = {2006},
+  comment     = {44-54},
+  location   = {Philadelphia, USA}
+}
+
+
+
+
+@inproceedings{LLD+08,
+  author    = {Jure Leskovec and Kevin J. Lang and Anirban Dasgupta and Michael W. Mahoney},
+  title     = {{Statistical properties of community structure in large social and information networks}},
+  booktitle = {WWW},
+  year      = {2008},
+  comment     = {695-704},
+  location   = {Beijing, China}
+}
+
+
+@article{PXK+02,
+  author    = {Sunil Prabhakar and Yuni Xia and Dmitri V. Kalashnikov and Walid G. Aref and Susanne E. Hambrusch},
+  title     = {{Query Indexing and Velocity Constrained Indexing: Scalable Techniques for Continuous Queries on Moving Objects}},
+  journal   = {IEEE Trans. Computers},
+  volume    = {51},
+  number    = {10},
+  year      = {2002},
+  comment     = {1124-1140}
+}
+
+
+@article{H01,
+  author    = {Alon Y. Halevy},
+  title     = {{Answering queries using views: A survey}},
+  journal   = {VLDB J.},
+  volume    = {10},
+  number    = {4},
+  year      = {2001},
+  comment     = {270-294}
+}
+
+
+@inproceedings{ACN00,
+  author    = {Sanjay Agrawal and Surajit Chaudhuri and Vivek R. Narasayya},
+  title     = {{Automated Selection of Materialized Views and Indexes in SQL Databases}},
+  booktitle = {VLDB},
+  year      = {2000},
+  comment     = {496-505},
+  location   = {Cairo, Egypt}
+}
+
+@inproceedings{MLF+08,
+  author    = {Emiliano Miluzzo and Nicholas D. Lane and Kristof Fodor and Ronald A. Peterson and Hong Lu and Mirco Musolesi and Shane B. Eisenman and Xiao Zheng and Andrew T. Campbell},
+  title     = {{Sensing meets mobile social networks: the design, implementation and evaluation of the cenceme application}},
+  booktitle = {SenSys},
+  year      = {2008},
+  comment     = {337-350},
+  location   = {Raleigh, NC}
+}
+
+@inproceedings{KZO+09,
+  author    = {Hassan A. Karimi and Benjamin Zimmerman and Alper Ozcelik and Duangduen Roongpiboonsopit},
+  title     = {SoNavNet: a framework for social navigation networks},
+  booktitle = {GIS-LBSN},
+  year      = {2009},
+  comment     = {81-87},
+  location   = {Seattle, WA}
+}
+
+@inproceedings{LCL+10,
+  title={{A Contextual-Bandit Approach to Personalized News Article Recommendation}},
+  author={Lihong Li and Wei Chu and John Langford and Robert E. Schapire},
+  booktitle={WWW},
+  pages={661--670},
+  year={2010},
+  location={Raleigh, NC}
+}
+
+@inproceedings{LDR+10,
+  title={{Personalized News Recommendation Based on Click}},
+  author={Jiahui Liu and Peter Dolan and Elin Ronby and Pedersen},
+  booktitle={IUI},
+  pages={31--40},
+  year={2010},
+  location={Hongkong, China}
+}
+
+
+
+@MISC{website:loopt,
+    TITLE        =  {{Loopt}},
+    KEY ={Loopt},
+    HOWPUBLISHED  =  {http://www.loopt.com}
+}
+
+@MISC{website:buzz,
+    TITLE        =  {{Google Buzz Moblie}},
+    KEY ={Google Buzz},
+    HOWPUBLISHED  =  {http://www.google.com/buzz}
+}
+
+
+@MISC{website:tuntwter,
+    author={Evan Weaver},
+    TITLE        =  {{Improving running components at Twitter}},
+    HOWPUBLISHED  =  {http://blog.evanweaver.com/articles/2009/03/13/qcon-presentation/}
+}
+
+@inproceedings{KS09,
+  author    = {Ali Khoshgozaran and Cyrus Shahabi},
+  title     = {{Private Buddy Search: Enabling Private Spatial Queries in Social Networks}},
+  booktitle = {12th IEEE International Conference on Computational Science and Engineering},
+  year      = {2009},
+  comment     = {166-173},
+  location   = {Vancouver, Canada}
+}
+
+
+@inproceedings{CH02,
+  title={{Minimal probing: supporting expensive predicates for top-k queries}},
+  author={Chang, K.C.C. and Hwang, S.},
+  booktitle={SIGMOD},
+  pages={346--357},
+  isbn={1581134975},
+  year={2002},
+  location={Madison, WI}
+}
+
+@article{FLN01,
+  title={{Optimal Aggregation Algorithms for Middleware}},
+  author={Ronald Fagin and Amnon Lotem and Moni Naor},
+  journal={PODS},
+  pages={102--113},
+  year={2001},
+  location={Santa Barbara, California},
+  data={May}
+}
+
+@article{IAE04,
+  title={{Supporting top-k join queries in relational databases}},
+  author={Ilyas, F. and Aref, G. and Elmagarmid, K.},
+  journal={The VLDB Journal¡ªThe International Journal on Very Large Data Bases},
+  volume={13},
+  number={3},
+  pages={207--221},
+  issn={1066-8888},
+  year={2004},
+  publisher={Springer-Verlag New York, Inc.}
+}
+
+
+@inproceedings{HCP09,
+  author    = {Chih-Chieh Hung and Chih-Wen Chang and Wen-Chih Peng},
+  title     = {{Mining trajectory profiles for discovering user communities}},
+  booktitle = {GIS-LBSN},
+  year      = {2009},
+  comment     = {1-8},
+  location   = {Seattle,WA}
+}
+
+
+@inproceedings{YTM09,
+  author    = {Daisuke Yamamoto and Itsu Takumi and Hiroshi Matsuo},
+  title     = {{Location-based social network services employing student cards for university}},
+  booktitle = {GIS-LBSN},
+  year      = {2009},
+  comment     = {21-24},
+  location   = {Seattle,WA}
+}
+
+
+
+@inproceedings{CX08,
+  author    = {Ying Cai and Toby Xu},
+  title     = {{Design, Analysis, and Implementation of A Large-scale Real-time Location-based Information Sharing System}},
+  booktitle = {MobiSys},
+  year      = {2008},
+  pages     = {106-117},
+  location   = { Breckenridge, CO}
+}
+
+@inproceedings{STS+10,
+  author    = {Laurynas Siksnys and Jeppe Thomsen and Simonas Saltenis and Man Lung Yiu},
+  title     = {{Private and Flexible Proximity Detection In Mobile Social Networks}},
+  booktitle = {MDM},
+  year      = {2010},
+  comment     = {75 - 84},
+  location   = {Kansas city, MO}
+}
+
+@inproceedings{FVMB+10,
+  author    = {Dario Freni and Carmen Ruiz Vicente and Sergio Mascetti and Claudio Bettini and Christian S. Jensen},
+  title     = {Preserving location and absence privacy in geo-social networks},
+  booktitle = {CIKM},
+  year      = {2010},
+  comment     = {309-318},
+  location   = {Toronto, Canada}
+}
+
+
+
+
+
+@inproceedings{ZZX+10,
+  author    = { Vincent Zheng and Yu Zheng and Xing Xie and Qiang Yang},
+  title     = {{Collaborative Location and Activity Recommendations with GPS History Data}},
+  booktitle = {WWW},
+  year      = {2010},
+  pages= {1029-1038},
+  location   = {Raleigh, NC}
+}
+
+
+@inproceedings{MXA04,
+  author    = {Mohamed F. Mokbel and Xiaopeng Xiong and Walid G. Aref},
+  title     = {{SINA: Scalable Incremental Processing of Continuous Queries in Spatio-temporal Databases}},
+  booktitle = {SIGMOD},
+  year      = {2004},
+  comment     = {623-634},
+  location   = { Paris, France}
+}
+
+
+@inproceedings{BML09,
+  author    = {Moira Burke and Cameron Marlow and Thomas M. Lento},
+  title     = {{Feed me: motivating newcomer contribution in social network sites}},
+  booktitle = {CHI},
+  year      = {2009},
+  comment     = {945-954},
+  location   = {Boston, MA}
+}
+
+
+@inproceedings{CJZ+09,
+  author    = {Yukun Chen and Kai Jiang and Yu Zheng and Chunping Li and Nenghai Yu},
+  title     = {Trajectory simplification method for location-based social networking services},
+  booktitle = {GIS-LBSN},
+  year      = {2009},
+  comment     = {33-40},
+  location   = {Seattle,WA}
+}
+
+
+@inproceedings{AGK+04,
+  author    = {Lauri Aalto and Nicklas G{\"o}thlin and Jani Korhonen and Timo Ojala},
+  title     = {{Bluetooth and WAP Push Based Location-Aware Mobile Advertising System}},
+  booktitle = {MobiSys},
+  year      = {2004},
+  pages     = {49-58},
+  location   = {Boston, MA}
+}
+
+
+@article{ BE07,
+    author      ={Danah M. Boyd and Nicole Ellison},
+    title       ={{Social network sites: Definition, history, and scholarship}},
+    journal     ={Journal of Computer-Mediated Communication},
+    year        ={2007},
+    volumn      =13,
+    comment       ={11-26}
+}
+
+
+@inproceedings{STS+09,
+  author    = {Laurynas Siksnys and Jeppe R. Thomsen and Simonas Saltenis and Man Lung Yiu and Ove Andersen},
+  title     = {{A Location Privacy Aware Friend Locator}},
+  booktitle = {SSTD},
+  year      = {2009},
+  comment     = {405-410},
+
+}
+
+@inproceedings{KIGI09,
+  author    = {Kazuki Kodama and Yuichi Iijima and Xi Guo and Yoshiharu Ishikawa},
+  title     = {{Skyline queries based on user locations and preferences for making location-based recommendations}},
+  booktitle = {GIS-LBSN},
+  year      = {2009},
+  comment     = {9-16},
+  location   = {Aalborg, Denmark}
+}
+
+@inproceedings{CYA+08,
+  author    = {Badrish Chandramouli and Jun Yang and Pankaj K. Agarwal and Albert Yu and Ying Zheng},
+  title     = {{ProSem: scalable wide-area publish/subscribe}},
+  booktitle = {SIGMOD Conference},
+  year      = {2008},
+  comment     = {1315-1318},
+  location   = {Vancouver, Canada}
+}
+
+@inproceedings{NMT06,
+  author    = {Kotaro Nakayama and Takuya Maekawa and Hirokazu Tomiyasu and Takahiro Hara and Shojiro Nishio},
+  title     = {{GeoNote.net: A Social Network System for Geographic Information}},
+  booktitle = {MDM},
+  year      = {2006},
+  comment     = {144},
+  location   = {Nara, Japan}
+}
+
+@inproceedings{M04,
+  author    = {Yutaka Matsuo},
+  title     = {{Social Network and Spatial Semantics for Real-World Information Service}},
+  booktitle = {MMAS},
+  year      = {2004},
+  comment     = {254-268},
+  location   = { Kyoto, Japan}
+}
+
+
+
+@article{CY08,
+  author    = {Badrish Chandramouli and Jun Yang},
+  title     = {End-to-end support for joins in large-scale publish/subscribe systems},
+  journal   = {PVLDB},
+  volume    = {1},
+  number    = {1},
+  year      = {2008},
+  comment     = {434-450}
+}
+
+@article{ZSA09,
+  author    = {Yongluan Zhou and Ali Salehi and Karl Aberer},
+  title     = {Scalable Delivery of Stream Query Results},
+  journal   = {PVLDB},
+  volume    = {2},
+  number    = {1},
+  year      = {2009},
+  comment     = {49-60}
+}
+
+
+@conference{YDM+07,
+  title={{Top-k Spatial Preference Queries}},
+  author={Man Lung Yiu and Xiangyuan Dai and Nikos Mamoulis and Michail Vaitis},
+  booktitle={ICDE},
+  pages={1076--1085},
+  year={2007},
+  location={ Istanbul, Turkey},
+  date={ April}
+  }
+
+@inproceedings{LMK10,
+  title={{FlexPref: A Framework for Extensible Preference Evaluation in Database Systems}},
+  author={Justin J. Levandoski and Mohamed F. Mokbel and Mohamed E. Khalefa},
+  booktitle={Data Engineering (ICDE), 2010 IEEE 26th International Conference on},
+  pages={828--839},
+  year={2010},
+  location={Long Beach, California}
+}
+
+
+@inproceedings{LSL+12,
+  title={{Optimal Top-k Generation of Attribute Combinations based on Ranked Lists}},
+  author={Jiaheng Lu and Pierre Senellart and Chunbin Lin and Xiaoyong Du and Shan Wang and and Xinxing Chen},
+  booktitle={SIGMOD},
+  pages={409--420},
+  year={2012},
+  location={Scottsdale, AZ}
+}
+
+@inproceedings{LSE+12,
+  title={{LARS: A Location-Aware Recommender System}},
+  author={Levandoski, J.J. and Sarwat, M. and Eldawy, A. and Mokbel, M.F},
+  booktitle={ICDE},
+  year={2012},
+  pages={450--461},
+  location={Arlington, VA},
+  date={April}
+}
+
+
+@inproceedings{CZ04,
+  title={{Efficient Top-k Query Calculation in Distributed Networks}},
+  author={Pei Cao and  Zhe Wang},
+  booktitle={PODC},
+  pages={206--215},
+  year={2004},
+  organization={ACM}
+}
+
+@article{YBL+08,
+  title={{Efficient Network Aware Search in Collaborative Tagging Sites}},
+  author={ Sihem Amer Yahia and Michael Benedikt and Laks VS Lakshmanan and Julia Stoyanovich},
+  journal={Proceedings of the VLDB Endowment},
+  volume={1},
+  number={1},
+  pages={710--721},
+  year={2008},
+  publisher={VLDB Endowment}
+}
+
+@inproceedings{SCK+08,
+  title={{Efficient Top-k Querying Over Social-tagging Networks}},
+  author={ Ralf Schenkel and Tom Crecelius and Mouna Kacimi and Sebastian Michel and Thomas Neumann and  Josiane X Parreira and Gerhard Weikum},
+  booktitle={SIGIR},
+  pages={523--530},
+  year={2008},
+  organization={ACM}
+}
+@inproceedings{SBE+12,
+  title={{Sindbad: A Location-based Social Networking System}},
+  author={Mohamed Sarwat and Jie Bao and Ahemd Eldawy and Justin J. Levandoski and Amr Magdy and Mohamed F. Mokbel},
+  booktitle={SIGMOD},
+  pages={649--652},
+  year={2012},
+  location={Scottsdale, AZ}
+}
+
+@inproceedings{BZM12,
+  title={Location-based and Preference-Aware Recommendation Using Sparse Geo-Social Networking Data},
+  author={Jie Bao and Yu Zheng and Mohamed F. Mokbel},
+  booktitle={SIGSPATIAL},
+  year={2012},
+  pages={184--195},
+  location={Redondo Beach, CA}
+}
+@inproceedings{RKV95,
+  title={{Nearest Neighbor Queries}},
+  author={Nick Roussopoulos and Stephen Kelley, S. and Frederic Vincent},
+  booktitle={SIGMOD},
+  pages={71--79},
+  year={1995},
+  location= {San Jose, California},
+  date={May}
+}
+
+
+
+
+@inproceedings{SS06,
+  title={{The Spatial Skyline Queries}},
+  author={Mehdi Sharifzadeh and Cyrus Shahabi},
+  booktitle={VLDB},
+  pages={751--762},
+  year={2006},
+  location={Seoul, Korea},
+  date={Sept}
+}
+
+@inproceedings{BKS01,
+  title={{The Skyline Operator}},
+  author={Stephan Borzsonyi and Donald Kossmann and  Konrad Stocker},
+  booktitle={ICDE},
+  pages={421--430},
+  year={2001},
+ date= { April},
+ location={Heidelberg, Germany}
+}
+
+@article{HS99,
+  title={{Distance Browsing in Spatial Databases}},
+  author={Gisli R. Hjaltason and Hanan Samet},
+  journal={ACM TODS},
+  volume={24},
+  number={2},
+  pages={265--318},
+  year={1999},
+  publisher={ACM}
+}
+
+@inproceedings{GBK00,
+  title={{Optimizing Multi-Feature Queries for Image Databases}},
+  author={Ulrich G{\"u}ntzer and Wolf-Tilo Balke and Werner  Kie{\ss}ling},
+  booktitle={VLDB},
+  pages={419--428},
+  year={2000},
+  data={Sept},
+  location={Cairo, Egypt}
+}
+
+@inproceedings{NR99,
+  title={{Query Processing Issues in Image (Multimedia) Databases}},
+  author={Surya Nepal and M.V. Ramakrishna},
+  booktitle={ICDE},
+  pages={22--29},
+  year={1999},
+ location={Sydney, Austrialia},
+ data={March}
+}
+
+@inproceedings{RVD+10,
+  title={{Efficient Processing of Top-k Spatial Preference Queries}},
+  author={Joao B. Rocha-Junior and Akrivi Vlachou and Christos Doulkeridis and Kjetil N{\o}rv{\aa}g},
+  booktitle={VLDB},
+  pages={93--104},
+  year={2010},
+  location={Seattle, Washington},
+  date= {Sept}
+}
+
+@inproceedings{JHB+09,
+  title={Twitterstand: news in tweets},
+  author={Sankaranarayanan, J. and Samet, H. and Teitler, B.E. and Lieberman, M.D. and Sperling, J.},
+  booktitle={Proceedings of the 17th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems},
+  pages={42--51},
+  year={2009},
+  organization={ACM}
+}
+
+@inproceedings{CG99,
+  title={Evaluating top-k selection queries},
+  author={Chaudhuri, S. and Gravano, L.},
+  booktitle={PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON VERY LARGE DATA BASES},
+  pages={399--410},
+  year={1999}
+}
+
+@article{MBG04,
+  title={Evaluating top-k queries over web-accessible databases},
+  author={Marian, A. and Bruno, N. and Gravano, L.},
+  journal={ACM Transactions on Database Systems (TODS)},
+  volume={29},
+  number={2},
+  pages={319--362},
+  year={2004},
+  publisher={ACM}
+}
+
+@book{G84,
+  title={R-trees: a dynamic index structure for spatial searching},
+    booktitle={SIGMOD},
+  author={Guttman, A.},
+  volume={14},
+  number={2},
+  year={1984}
+}
+                                                                                                                                                          B6396EBF9A7A06453A81EBD
+808B047421B0F88F62B3FF217542FBDA872D03A476FBC7C0D658C03AF70ABB40
+03F1A3027E0FE186A22AD461835877ECF843C0E8B8340306092FBC5E91783A48
+E010EBD29F114BC273BDC53D2C94275F8956A74561813AA6C2D896CB3F6E13E3
+30F6C230C00917A40EC6F4689B65BEE32F5722BB1D1147585AB3B3D2D5EB8273
+CBE30D1C6CA1BCC4BEA9B87A014E7ED3CE53D13ACC8D426267CD3BFB8497E1DC
+C51CEB14F9CFB4D4BC9D6EA5A49DC3871DE59C89F855F079299F45D363F78634
+493829329E3F370D117DEAA18E7A6989C515667C2229779B9A5494DF0B4109E7
+71D79D379FA7B408A4675FA3DE17ED0ED632F9A443527CDA8E960411AD4070EE
+173ABBFAF9101BE92BE59707F98419503A85AC58B949E8595D66D7B13B8FD4EF
+11B28FCB5955C5F147BD7FA141AE0CA2ABCB1CAF82FE22D3281852205087CF45
+549F4D5B47F52AF50E8F6FA0AEC0F95FD0B1EBDCF965BC8A924CE0F4598AC546
+C15CEE4EDE7E6DD0E5FEC3A531B944CEA406DBEE21C4CF3384A79D0D5CD51BD8
+AA5B8B1FC987AEB57E86D3C6FDFADF998A6D6043449FA5B88BB2DCBF2945A513
+AD7ECD01B39BE46A577437E1774C3FEA176287C51ACCA15909E987B5AC2CA664
+709AA5605EA89A8DCE6B4014CFA781E822E8B05F377BD0187D5EAA0585A98E2D
+6726C471578295D824D1FBFE89F04A67F1A360D799CDF92C1218F29C24DE22CB
+C6B625D044404C22C89C433715BD77D0BF171030BA84E292B7A81E2FD99D4E67
+BA702C2EFA11D4461D833E74E97C9E295C6D170DB6BD73D615D03E678B0296C0
+F8BF99321767684127625942B4C3241BD0608460C81D97FA658BC179917B5065
+74A4D1F729CEB1D51C82F9C90F0C712917AC482D413ED7CAAFD545508652DACC
+1A03842E354F734C5FCEC8C7BEA4C69B066DBC83BFAA473D0A632DA2CEDF20B7
+6C7C83B4AE2AF7E05AA2C081BB6870AE38848F3870DD62C7D56EF1CCDD4BA3B0
+32C61ABE629BBC464BBAB06AA0202772C16D82427ABAB4830ACEA267B0109A81
+BA5D832731D1E9C9F0552BEF7A9B7AAA73760C6A09B910009BA9D93F1A56298B
+A43A32D43CAA3988643DE373FF47C176CE92D7931601F0034E6CC303876498AC
+026BB32D2F656A3541815697CBA2B6D527B69816161B2E13171E073D7CD85435
+3D32708391F63D592B71D98805CD19978C2BAF780CB124372EEA0A3DAB537683
+DC74F9E9EF98843F170FB086AEFD526CB81A7CC88046C52E1E56EB40F6F5C75A
+FE9D5ADE49E82078858072F68BCD02487EBAF4E3F7F309628C1FDCD4B01F7D00
+E1AE0A7CD3455953FFC77EEDCC5B5ECB1FA583064EC17132A3C12C0153C4B87D
+AA57FF73AD33C22C81C545F0593DC7EF438FF7A5F76A04E52848E00CF2C8CB06
+F295B1CD3BDB1D9E4EDD765D3753EA8DB76DAACAD75CEAC866FC4CA41501200F
+F12998E8DA573786AA9A7232287A6D19A12536026BA4423EF0B6D81D38BDCD9D
+2BEF15BCF32824F8EE802B461F52BD926A5BEB2E6CB31AF83E98E849D4339FFF
+95419941B12D2F3B76CCD34D6B78B91BDFA5DB4D4879501DF3E514A5EA8F1713
+E96330C5B4F1B7BA42D42F05E229FC303AE00E954A81F9BD43016F5930A0C490
+6C753157E4355F6ED3C5D1963779EB27402522B5E9D459206B3A06E594DF198B
+785F96B96E13045594EB42EF4A8BFE0DFCB4C5A2DA9594431FBE72A5AE18991A
+36FEB5FD9E8B238B3A095939B6ECAF5644BCE7DFFD8EA3E723F66B305F142B71
+B % IEEE Paper Template for US-LETTER Page Size (V1)
+% Sample Conference Paper using IEEE LaTeX style file for US-LETTER pagesize.
+% Copyright (C) 2006 Causal Productions Pty Ltd.
+% Permission is granted to distribute and revise this file provided that
+% this header remains intact.
+%
+
+
+
+%\documentclass[conference]{IEEEtran}
+%\documentclass[10pt,conference,letterpaper]{IEEEtran}
+%\documentclass{acm_proc_article-sp}
+%\documentclass{sig-alternate}
+\documentclass{vldb}
+\usepackage{threeparttable}
+\usepackage{times,amsmath,epsfig}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{array}
+
+\newenvironment{myitem}{
+\begin{itemize}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt}
+  \setlength{\partopsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\parsep}{0pt}}{\end{itemize}
+}
+
+\newenvironment{myenum}{
+\begin{enumerate}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt}
+  \setlength{\partopsep}{0pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\topsep}{0pt}
+  \setlength{\parsep}{0pt}}{\end{enumerate}
+}
+
+
+\newtheorem{mydef}{Theorem}
+
+\newcounter{myfootertablecounter}
+
+\newcommand\myfootnotemark{%
+%\refstepcounter{footnote}%
+\addtocounter{footnote}{1}%
+\footnotemark[\thefootnote]%
+}%
+
+\newcommand\myfootnotetext[1]{%
+\addtocounter{myfootertablecounter}{1}
+\footnotetext[\value{myfootertablecounter}]{#1}
+}
+
+% from now on, myfootnote has to be used rather than footnote to
+% adapt the myfootercounter
+\newcommand\myfootnote[1]{%
+\addtocounter{myfootertablecounter}{1}
+\footnote{#1}
+}%
+%
+\title{GeoRank: An Efficient Location-Aware\\ News Feed Ranking System}
+
+\author{%
+% author names are typeset in 11pt, which is the default size in the author block
+{Jie Bao\hspace*{0.8in}   Mohamed F. Mokbel}%
+% add some space between author names and affils
+\vspace{1.6mm}\\
+\fontsize{10}{10}\selectfont\itshape
+Department of Computer Science and Engineering, University of Minnesota, Minneapolis, MN 55455, USA\\
+\fontsize{9}{9}\selectfont\ttfamily\upshape
+\{baojie,  mokbel\}@cs.umn.edu\\
+}
+\begin{document}
+\maketitle
+%
+
+\sloppy
+
+\begin{abstract}
+
+News feed function becomes very popular in many social networking services and news aggregators, as it promise to deliver the messages from a user's subscribed news sources (or friends). More recently, location-awareness has been introduced to the news feed service, which returns the user with the news items related with her current location. However, with the large number of the relevant news items generated by the user's news source/friends, existing news feed services opt to return the top-$k$ most recent ones (e.g., Twitter timeline), which completely overlooks a user's preferences over the messages' spatial relevance and may end up in missing more geographically close/important news items in the news feed. In this paper, we present GeoRank, an efficient location-aware news feed ranking system that provides a personalized top-$k$ ranked new feed from the user's subscribed news sources based on (a)~spatial proximity, (b)~temporal proximity, and (c)~user preferences. GeoRank encapsulates spatio-temporal pruning techniques deep inside the system to improve the query response time and efficiency. GeoRank is composed of two main modules, namely, {\em query processor} and {\em message updater}. The {\em query processor} module is triggered by the user query, upon logging on to the system, to provide the top-$k$ ranked news items from the sources based on a personalized spatio-temporal ranking function. The {\em message updater} module is a process running in the background, which keeps maintaining a set of statistics that will be used later by the {\em query processor} module. Such statistics are the key components that ensure the efficiency of the {\em query processor} module, and hence GeoRank system. Extensive experimental results, based on real and synthetic data sets, show the scalability and efficiency of GeoRank system.
+\end{abstract}
+
+
+% NOTE keywords are not used for conference papers so do not populate them
+%\begin{keywords}
+
+%\end{keywords}
+%
+
+\input{Intro}
+\input{Related-new}
+\input{Prelim}
+\input{Overview}
+\input{Query}
+\input{Update}
+\input{Experiments}
+\input{Conclusion}
+
+\scriptsize
+\bibliographystyle{IEEEtran}
+\bibliography{GeoRank}
+\end{document}
+                                                                                                                                         33A57B5AE0328EF9D57ADDAC543273
+C01924195A181D03F5054A93B71E5065F8D92FE23794D2DB9928A7C95D3A6E9B
+8E92F84CA0AA44461D2F4FA0F8B81C6F5B7BE98C9712BE166610465CF689DFAF
+27C875C029C0116DE61C21DA0092D029E7DBEDFDDEE3D67E6936623AB53FA2AF
+18BEDDD7AC19A19CADB6ED6CA7A26E6044BE414FFF59C0B98D5819A6B881F9AB
+7AD0D03BDD5CD309C67811D5CF0B93F6FDC9AE64F74ED4E81F2E18D880BD842A
+DAFD0BDF06300201C6946087FC0B999447BC370200BFB8CA420B668B32EBC242
+6DB1546A7164CF55B332FE9D239B65F532B69EF9F4F93828A44C8F5C526126F8
+B7A369114CA68D4F98638121F4E17F351723D9F1A902FCF087F94AFD23876517
+2D15B482AF2D68C3F31FFA864E031596E597882578AC7FB0DAE2A713B065B374
+3E2E72519ED6D50CBCA40A7275A7109A4F3ED8A4566AD8832890D3D1F4899850
+9B757442B7EA355175CD5D6D8B4152ED2D7EEB4CE30F174FF672140354046A45
+7098EC45B9DF3DF5CF7B417E201DA88308CEF4CED8E8903AF24FB8DD0187352D
+25738519ECBC70304F8F620CC45D2586619205DA3955696FAFFE2082402B3502
+CB682F410DE5FFE80A4DA3D3BCF02E35BD577D0DE55E7B8A33B7A2FD5136B5DD
+A0BCB61F8E7F4363C21F890CF287304DDB8FCE7FE207C0D160B81E7EA662BED2
+DFF8C444E19C91E72254257CD87240A70F1A964FA54ED9ECF27E27A57DACC3DE
+EABB92C085030870C6CF5C40B6E47F5C0AEB30E84A73ECDABB2D754EF6EA28BB
+16EBD6636BC288E62F4A38BFB55F5F4DD20FDD77D767F6CB52F9513E8EB75413
+07F1877B2C01278675177499E4E8EB09F2657821613F5C7643FC064293EC6E9E
+B519FFAEEA36B19C9D1302CF91FCBF87FCB57C5F995CB6712BB3D8681EB6F05B
+B2A4195A3C73CB4ABCCFB958EAC533BD89560D2790CDE1444C0F2E4EF27A529C
+F01052964E56F6D76A190E5FF45934BB711A3406284AF130D4DC0D8112BB3752
+762CA0200CA262359D4F54C0CCFA9A50DE18C7DB14419E2990ADDC4A54B94978
+D9174CA39434022FA77FB30179EF805E2189C35919F5EBE215EE2A00B4407826
+CE56329C5586D8B414770BA5D45513C3AF1931D632FCE69B4CA504944E03362C
+74A1177C6398A61A12DAA0F156543E2A8E9969C4308B7ACC21A5ECAC8F172541
+1B1316A88C0C163E574FFD3CD22FF08488662FCF2F9344BC25D02146F36CA6F9
+E2D0130C654B7485EEA9A110A33AA0C769121F81821E9A2BD062FAC158359D44
+3F9D9947200EF1EDDD5860F10438B162A69683957300C75AF7546C70C97AB2EE
+37EAAF0089E2623F787F252569B06C665FDB45EC9681C0774ACFBA76B98C4E89
+7EB12AA5F8798FFC110B49C25E3A483ABE83B0BCC6DF0578403ADC369E013762
+C9D08FC94D949BAE636ACA9F36F4E3F02296775A062077B011A705B6F1784D36
+A926622CB3847533D7ACB24A4EBABB14593B5D8E1DAE2BFEF8A51835C8D4E76D
+7543C126A4271C59A5881A5AF89331694F84489CA66725995DC3070F306EA447
+CF30F63CD476A46D528EC1FFBFB8EACFA2BEEDCF54C92CE2BD26DEA5827186BD
+3A4D1709415CEE7D51D671357B4A5D11E835F63521B9824EE5282E58F05A8ACC
+FD249461181A38C2F47BAC4E79BE368D64F886AA493C61CBCB2ED401C8AFBA61
+59CA6F6216D941A92AC52ACB3D7ECC28D6A58EF4CC70BA6DE23E80937AB38E89
+6F05FDD15B954C0826636267EDAF9F2BB466BF79D2E10EED9B04297E6BC93069
+79581ADD1A9D9FAE9306F46AC95B98C60A2E53D60CF1AA4069BE301E17E25070
+F98DD67BD8642B1D07571A32766072E48BF27E1576FFEED300D7313A358A823B
+49C8F135961B7E259095C9BB67F996CE0B90E95344F203922F47E11753F70D38
+2ECB615403490310CEE6C03AFA97DA2F47ED47125D110FA69725BA0018F6A40B
+29A307FDB3E52322A77A0102E6F57654CF1E96A134D13860D83AFA0A41112D3F
+2247A09ACF7D06713BE443FA27C7E7220E875965D53030FE7D2D62EFD2F1DB87
+5FB091FEAF599BA8C5167525899E578AB341BFE2BC4E53A047093168AE189237
+EA55F055514EFA939DAE9E859CB5FBCF37D99484F44FE5AA5FA386B28BB642F5
+5DBAF059A50FE96C7C6D834531D64F1F2E99AB2E96EE74D149178B1C0618495E
+293973D9A03E1790654B67C0882376ABEC17D74785B3737D81644F28B3BC6FFF
+F92FE29126995A07E0BC5EF3A4B93789A103C428943E045B8D1A5063AE71E806
+568D48072E53DEA85253B01DF0BB7367A6BE4DD7BE514AD74E3F77C825ABA405
+64DAFA25EAFF8F63344B5F6B523629776CEB090B546469F6A6008DE43072DD3C
+DEF51F62731037D1FBD0C038A1E9B669849EB3BEBA281624F13D20B61917A109
+A0A7871A73F7BAA18077360B38A4625C5DB9AB9E43BDEEB856FD0E2D3AA2E075
+267B978B9EB47F2369302E87DBD5D5B422830BEC324\section{Experimental Evaluation}
+\label{sec:experiment}
+
+This section gives experimental evaluation of GeoRank based on an actual system implementation in PostgreSQL database management system~\cite{software:Postgresql}. Experiments are based on a set of 10~Million geo-tagged Twitter messages (i.e., tweets) issued within the state of Minnesota, US, generated as follows: First, we crawled the twitter message data via Twitter Search API\footnote{Twitter Search API: http://search.twitter.com.} by continuously issuing a query to the API with a spatial range of 150$\times$150 miles space (to approximate the state of Minnesota). After one week of continuous Twitter API querying, we got $\approx$ 650K distinct geo-tagged tweets, where the geographical information with each message is represented as either a semantic location, e.g., a city name or latitude/longitude coordinates. In the former case, we use TinyGeoCoder API\footnote{TinyGeoCoder: http://tinygeocoder.com/} and Google GeoCoding API\footnote{Google GeoCoding: \\ http://code.google.com/apis/maps/documentation/geocoding/} to convert these semantic locations into latitude/longitude coordinates. We make use of these real 650K tweets to get to know the real spatial and temporal distributions of posted tweets. Finally, we generate synthetic 10,000 GeoRank users in our system, where each user is associated with 1,000 geo-tagged tweets as historical messages. The locations and issuing time of all the 10~Million messages, produced for all our 10,000 users, mimic the spatial and temporal distributions of our crawled real tweets. Also, locations of the 10,000 users are static and set randomly based on the locations of the real tweets.
+
+Mostly taken from Facebook statistics\footnote{Facebook statistics: http://www.facebook.com/press/info.php?statistics}, and unless mentioned otherwise, each user is following an average of 150 users (i.e., source users) and is also followed by another 150 users (i.e., followers), randomly picked from the user set. We set the default $k$ as~30, which means the user would like to see the top-30 ranked messages from her following source users in the news feeds. We use a simple message ranking function in the experiments, where {\em Max} is set to~10, and every one mile or one hour is equivalent to 0.1 in spatial and temporal normalization, respectively. The default user preference parameter $\omega$ is set to~0.5 for all users, indicating that the user has the same weight over both spatial and temporal domains. Finally, a 10$\times$10 grid structure is constructed for each user to index message locations, locations of the source users, locations of the followers, and the monitoring areas. All experiments were evaluated on a server computer with Intel Core 2 Quad CPU \@ 2.83GHz processor and 8~GB RAM running Ubuntu Linux 10.04.
+
+
+The rest of this section is organized as follows: Subsection~\ref{subsec:overall} evaluates the overall performance of GeoRank system. As the two main modules in GeoRank, {\em query processor} and {\em message updater} run in isolation, i.e., {\em query processor} is the online interface for the users while {\em message updater} is a process running in the background, we evaluate their performance separately in Sections~\ref{subsec:query} and~\ref{subsec:update}, respectively.
+
+
+\subsection{GeoRank Overall Performance}
+\label{subsec:overall}
+
+
+In this section, we compare the overall performance of GeoRank against a straightforward deployment of the ranking function {\em on-top} of a news feed system. In the {\em on-top} solution, we issue one top-$k$ query to each source user and and aggregate all the returned top-$k$ results to produce the news feed. We still optimize in the {\em on-top} solution, where we use the temporal order of the source user's messages for the early termination.
+
+Figure~\ref{fig:exp:query:basic}a gives the performance of both approaches when varying the user preference parameter $u.\omega$ from 0 to 1. GeoRank consistently gives much better performance that ranges from 6 to 10 times better than that of the {\em on-top} solution for news feed processing. This is mainly because GeoRank reduces the number of evaluated source users, i.e., we do not have to check on each source user, and also minimizes the number of messages processed at each evaluated source user. Another thing to note in this experiment is that with the increasing of $u.\omega$, the {\em on-top} solution gets better performance. This is because the temporal early termination technique used here is more effective when we give more weight to the temporal domain. This is not the case in GeoRank as it almost gives the same good performance for all values of $\omega$, as GeoRank employs both spatial and temporal pruning.
+
+
+\begin{figure}[t]
+\small
+\centerline{\subfigure[Different User Preferences.]{
+\includegraphics[width=1.7in]{./Results/Q_omega_T_Naive.eps}}
+\hfil\subfigure[Different Source Users.]{
+\includegraphics[width=1.7in]{./Results/Q_F_T_Naive.eps}}} \vspace*{-5pt}
+\caption{Compare With ``On-Top'' Approach.}\label{fig:exp:query:basic}
+ \vspace{-15pt}
+\end{figure}
+
+\begin{figure*}[t]
+\small
+\centerline{
+\subfigure[Processing Time.]{
+\includegraphics[width=1.7in]{./Results/Q_F_T.eps}}
+\hfil
+{\subfigure[Total Processed Messages.]{
+\includegraphics[width=1.7in]{./Results/Q_F_M.eps}}}
+\hfil
+{\subfigure[Average Processed Sources.]{
+\includegraphics[width=1.7in]{./Results/Q_F_F.eps}}}
+\hfil
+{\subfigure[Average Messages per Source.]{
+\includegraphics[width=1.7in]{./Results/Q_F_M_avg.eps}}}
+}
+\caption{Different Numbers of Source Users}
+\label{fig:exp:query:source}
+\vspace{-15pt}
+\end{figure*}
+
+Figure~\ref{fig:exp:query:basic}b gives the performance of the same experiment, yet, when varying the number of source users from 100 to 300 to simulate the users following different numbers of source user. In the experiment, each user has the same number of randomly selected source users and we evaluate the average processing time for the system to process the news feed. As shown in the figure, GeoRank scales up well with the increase in the number of source users, while the performance of the {\em on-top} solution deteriorates significantly. GeoRank outperforms the {\em on-top} approach consistently over all the different numbers of source users in the experiment. Moreover, the performance gains by GeoRank increases significantly, when the querying user follows more source users. Especially for the case of 300 sources, GeoRank gives 28 times better performance than the {\em on-top} approach. The main reason behind that is due to the pruning power at GeoRank side avoiding processing the disqualified source users, while {\em on-top} still needs to check on all source users to get the final results. On the contrast, GeoRank does not care about the total number of source users is followed by the querying user, it will always process up to $k$ source users to generate the news feed. As a result, we can infer that GeoRank will be even more efficient comparing with the {\em on-top} approach for the active users, who may follow hundreds or thousands of other users in a real social networking system.
+
+Although all the above comparison only demonstrates the performance differences with the single news feed operation between GeoRank and the {\em on-top} approach, we can observe that GeoRank outperforms the {\em on-top} approach consistently in all the cases. Thus, we can safely conclude that GeoRank will reach a better throughput than the {\em on-top} approach. On the other hand, we find that the {\em on-top} solution is impractical due to its unacceptable performance (i.e., the response times), and hence we will not consider it in the further experiments.
+
+
+
+\subsection{GeoRank Query Processor Performance}
+\label{subsec:query}
+
+This section studies the performance of the internals of GeoRank {\em query processor} module, i.e., the processing time for GeoRank system to produce the news feed for the users. As discussed in Section~\ref{sec:query}, GeoRank {\em query processor} has two main steps: {\em candidate sources selection} and {\em news feed aggregation}. To study the effect of each step separately, we compare two versions of GeoRank. The first version, termed {\em GeoRank-CS} applies only the first pruning technique, i.e., {\em candidate sources selection} when processing the user's news feed, while the second one is the full version of GeoRank with its two steps. The comparison is done when varying the number of source users, $k$, and $\omega$.
+
+
+\noindent \textbf{Number of source users.} Figure~\ref{fig:exp:query:source} gives the performance of both GeoRank and GeoRank-CS when varying the number of source users from 100 to 300. The performance is measured in terms of processing time (Figure~\ref{fig:exp:query:source}a) and number of processed messages (Figure~\ref{fig:exp:query:source}b). The processing time for both GeoRank and GeoRank-CS increases with the increase of the number of sources, as we will need more time to calculate and rank the scores of their most relevant messages in the selection step. The performance gap between GeoRank and GeoRank-CS shows the effect of the {\em news feed aggregation} step, employed by GeoRank, where it: (a)~prunes more sources than GeoRank-CS due to its early termination condition, and (b)~employs both spatial and temporal early pruning techniques to avoid retrieving $k$ messages from each candidate source. In terms of number of processed messages (Figure~\ref{fig:exp:query:source}b), it is interesting to see a consistent behavior for both GeoRank-CS and GeoRank, as the number of processed message is almost not affected by the increase of the number of sources. This is mainly as in both algorithms, the {\em candidate selection step} prunes the list of sources to only 30, i.e, the value of $k$. As a result, no matter how many sources we have, we just operate on the top-30 of them in GeoRank-CS. For GeoRank, we start from top-30 with more pruning to reduce it more, as shown in Figure~\ref{fig:exp:query:source}c. So, it is also not affected by the increase of the number of sources. Moreover, the {\em news feed aggregation} step also reduces the number of messages evaluated for each source, as shown in Figure~\ref{fig:exp:query:source}d, because of the {\em spatial, temporal} and {\em number} boundaries further prune the unqualified messages.
+
+
+
+\begin{figure}[t]
+\small
+\centerline{\subfigure[Processing Time.]{
+\includegraphics[width=1.7in]{./Results/Q_K_T.eps}}
+\hfil{\subfigure[Total Processed Messages.]{
+\includegraphics[width=1.7in]{./Results/Q_K_M.eps}}}
+}
+ \vspace{-15pt}
+\caption{Different Numbers of K Values.}\label{fig:exp:query:K}
+\end{figure}
+
+
+
+
+\noindent \textbf{Top $k$ values.} Figure~\ref{fig:exp:query:K} gives the performance of both GeoRank and GeoRank-CS when varying $k$ from 10 to 50, in terms of processing time (Figure~\ref{fig:exp:query:K}a) and number of processed messages (Figure~\ref{fig:exp:query:K}b). With the increase of $k$, Both GeoRank and GeoRank-CS take more time to produce the query answer and also process more messages. This is natural as both algorithms will need to process more sources, and messages, to get the requested top-$k$ news feeds. However, it is interesting to see that the performance gain of GeoRank over GeoRank-CS increases with the increase of $k$. This shows that with larger $k$, the {\em news feed aggregation} step in GeoRank becomes even more effective, due to its pruning and early termination techniques. Also, it is obvious that the trend of processing time is similar to the trend of the number of processed messages, which gives insight that the processing overhead is mainly due to the processed messages.
+
+
+
+
+
+\begin{figure}[t]
+\small
+\centerline{
+\subfigure[Processing Time]{
+\includegraphics[width=1.7in]{./Results/Q_omega_T.eps}}
+\hfil{\subfigure[Total. Processed Messages.]{
+\includegraphics[width=1.7in]{./Results/Q_omega_M.eps}}}} \vspace*{-5pt}
+\caption{Different User Preferences.}
+~\label{fig:exp:query:omega}
+ \vspace{-15pt}
+\end{figure}
+
+
+
+\noindent \textbf{User preference parameter u.$\omega$.} Figure~\ref{fig:exp:query:omega} gives the performance of both GeoRank and GeoRank-CS when varying $\omega$ from 0 (spatial proximity is mostly favored) to 1 (temporal proximity is mostly favored), in terms of processing time (Figure~\ref{fig:exp:query:omega}a) and number of processed messages (Figure~\ref{fig:exp:query:omega}b).
+For all values of $\omega$, there is a consistent performance gap between GeoRank and GeoRank-CS, which gives an indication that the {\em news feed aggregation} step is not really affected by the value of $\omega$. Although $\omega$ plays a major role in determining both the spatial and temporal boundaries in the {\em news feed aggregation} step, increasing or decreasing the value of $\omega$ just tightens one boundary and relaxes the other. Overall, the performance gain becomes consistent. In the mean time, for $\omega > 0.5$, we can see that the number of processed messages increases for both GeoRank and GeoRank-CS, hence, the performance degrades. This is mainly due to the distribution of messages that is more clustered towards the time domain, and hence favoring only the temporal domain will result in processing more messages.
+
+
+
+\subsection{GeoRank Message Updater Performance}
+\label{subsec:update}
+
+
+This section studies the performance of the internals of GeoRank {\em message updater} module, which is the overhead to maintain the internal statistics in GeoRank. As discussed in Section~\ref{sec:update}, GeoRank {\em message updater} employs a set of monitoring areas, indexed by a spatial grid index structure, to determine which followers will be affected by the new message. To evaluate the main idea of the {\em message updater} module, we compare the full version of GeoRank against a {\em basic} approach for the {\em message updater} module, which just scans all the followers for most relevant message updates whenever the user submits a new message. Below, we briefly discuss the results when varying the number of followers, update frequencies, and $\omega$.
+
+
+
+\begin{figure}[t]
+\small
+\centerline{\subfigure[Processing Time.]{
+\includegraphics[width=1.7in]{./Results/U_F_T.eps}}
+\hfil\subfigure[Processed Followers.]{
+\includegraphics[width=1.7in]{./Results/U_F_F.eps}}} \vspace*{-5pt}
+\caption{Different Numbers of Followers.}
+\label{fig:exp:update:followers}
+ \vspace{-15pt}
+\end{figure}
+
+
+\noindent \textbf{Number of followers.} Figure~\ref{fig:exp:update:followers} gives the performance of both GeoRank and {\em basic} approaches when varying the number of followers $|u.\cal F|$ from 100 to 300, in terms of average processing time for each posted message (Figure~\ref{fig:exp:update:followers}a) and number of processed followers (Figure~\ref{fig:exp:update:followers}b). In terms of average processing time, both GeoRank and {\em basic} encounters more time with the increase of the number of followers. However, the processing time of {\em basic} increases more with the number of followers, as it needs to check all the followers for most relevant message update. On the other side, GeoRank is more scalable comparing with the {\em basic} approach, especially for more followers. This is because GeoRank utilizes the monitoring areas and selects the affected followers using the message location. In terms of the number of followers to check on (Figure~\ref{fig:exp:update:followers}b), the {\em basic} approach just checks on all the followers, while GeoRank checks on only subset of the followers, whose monitoring areas includes the location of the new message. For example, in the case of 300 followers, the {\em basic} approach checks on 300 followers while GeoRank checks on only 140 followers.
+
+
+
+
+
+\begin{figure}[t]
+\small
+\centerline{\subfigure[Processing Time.]{
+\includegraphics[width=1.7in]{./Results/U_FQ_T_avg.eps}}
+\hfil\subfigure[Processed Followers.]{
+\includegraphics[width=1.7in]{./Results/U_FQ_F_avg.eps}}} \vspace*{-5pt}
+\caption{Different Message Update Frequencies.}
+\label{fig:exp:update:frequency}
+ \vspace{-15pt}
+\end{figure}
+
+
+
+\noindent \textbf{Message update frequencies.} Figure~\ref{fig:exp:update:frequency} gives the performance of both GeoRank and {\em basic} approaches when varying the message update frequency from 1 to 15 messages per day, in terms of average processing time for each posted message (Figure~\ref{fig:exp:update:frequency}a) and number of processed followers (Figure~\ref{fig:exp:update:frequency}b). In terms of average processing time, the {\em basic} approach suffers from an increase in processing time with higher frequencies, where we will need to check on more messages to get the result. In the mean time, GeoRank shows much better scalability where it actually gives better performance with higher update frequency. The main reason behind this scalability is that with higher update frequencies, GeoRank can easily update the monitoring areas for the user followers to be tighter and more accurate. Thus, higher update frequency results in a much better performance for GeoRank. In terms of the number of followers to check on (Figure~\ref{fig:exp:update:frequency}b), the {\em basic} approach gives steady state performance as it basically checks for all the 150 followers. In the mean time, GeoRank checks for lower number of followers with the increase of the update frequency. This is mainly due to the tighter and more accurately calculated monitoring areas, as previously discussed.
+
+
+
+\begin{figure}[t]
+\small
+\centerline{\subfigure[Processing Time.]{
+\includegraphics[width=1.7in]{./Results/U_omega_T.eps}}
+\hfil\subfigure[Processed Followers.]{
+\includegraphics[width=1.7in]{./Results/U_omega_F.eps}}} \vspace*{-5pt}
+\caption{Different User Preference Parameters.}
+ \vspace{-15pt}
+\label{fig:exp:update:omega}
+\end{figure}
+
+
+
+
+\noindent \textbf{User preference parameter.} Figure~\ref{fig:exp:update:omega} gives the impact of different follower's preference parameter {\em u}.$\omega$ on the message update performance of GeoRank and {\em basic} approach, where we set the same preference parameter for all the user's followers varying from 0 (only cares about location) to 1 (only cares about time). Figure~\ref{fig:exp:update:omega}a gives the average processing time, and Figure~\ref{fig:exp:update:omega}b gives the average number of followers processed by each approach for one message update. We have the following observations: (1)~the basic approach is almost not affected by the $\omega$ at all, as it checks the most relevant message update for all the followers, regardless of their preference parameter $\omega$, (2)~GeoRank is more scalable than the {\em basic} approach as it only updates a subset of the followers for each message update, and (3)~GeoRank has a better performance, when the follower's preference parameter is smaller (cares more of the spatial domain). This is because the monitoring areas are calculated based on Equation~\ref{eq:monitor}, where with a larger preference parameter $u_f.\omega$, we will have a smaller monitoring area registered at the user's spatial index. As a result, less number of followers is selected for most relevant message updates, when a new message is posted from the user. On the other hand, when the follower's preference parameter is larger (i.e., cares more about time), the processing time of GeoRank increases, as each follower has a larger monitoring area and more followers are selected for update when a new message is posted. For example, in the extreme case $u_f.\omega = 1$ (meaning that the followers only cares the most recent message from the source users), GeoRank has the same performance as the basic approach, because, in this case, the monitoring area is set as the whole space, and all the followers need to be selected for the most relevant message update.
+
+
+
+                                                                                                                                                                                                                                                                                                                                              
+\section{Preliminaries}
+\label{sec:prelim}
+
+This section sets up the stage for the rest of the paper by illustrating few concepts that are extensively used in GeoRank. In particular, Section~\ref{subsec:users} discusses messages, system users and the rank-aware location-based news feed, while Section~\ref{subsec:function} illustrates the message ranking functions used by GeoRank. Finally, Section~\ref{subsec:problem} provides the formal problem definition.
+
+
+\subsection{Messages, Users, and News Feed}
+\label{subsec:users}
+
+Similar to existing social networking services, e.g., Facebook and Twitter, messages, system users, and news feedpresent the core components of GeoRank system. Below is a description of these components within GeoRank framework, which can be used to leverage existing social networking services to provide location-aware news rankings.
+
+
+\noindent \textbf{Location-based Messages.} Similar to the existing social networking services, each posted message $M$ from a GeoRank user $u$ has a timestamp $M.t$ indicating its issuing time. In addition, each message has an explicit geographical coordinate $M.loc$ indicating the location of the posted message, which can be either the issuing user location, the location of the posted message extracted from a GPS equipped device, or the most related location from the message contents.
+
+
+\noindent \textbf{System Users.} A user $u$ in GeoRank has four main attributes: (1)~the user location $u.loc$, which can be set to indicate either the user current location extracted from a GPS device or a fixed location set in the user profile, (2)~a set of followers $u.\cal F$ that represents the set of other GeoRank users who have indicated their interest in any location-based messages posted by $u$, (3)~a set of sources $u.\cal S$, that represents the set of other GeoRank users, where $u$ has indicated his/her interest in any location-based messages posted by any of them, and (4)~a preference parameter $0 \leq u.\omega \leq 1$, that weights the user preference towards spatial and temporal proximity within an arbitrary ranking function, described in Section~\ref{subsec:function}.
+
+
+
+\noindent \textbf{Rank Aware Location-based News Feeds.} Once the user $u$ logs on to GeoRank, $u$ receives its news feedthat contain a set of location-based messages that are: (a)~issued by one of the users in $u$'s source list, $u.\cal S$, and (b)~among the top-$k$ highest scores, according to the message ranking function, described in Section~\ref{subsec:function}, that takes into account user location $u.loc$, message location $M.loc$, message time $M.t$, user log on time $u.t$ and user preference parameter $u.\omega$. $k$ is a system wide parameter indicating the total number of messages that will be delivered to any logged on user. A typical value of $k$ is 50 for desktop users and 10 for a mobile devices. During a logging session, a user $u$ may post location-based messages that will be considered later by all its follower in $u.\cal F$.
+
+
+
+\subsection{Message Ranking Function}
+\label{subsec:function}
+
+GeoRank employs a ranking function $Ranking(u,M)$ that gives the relevance score of a message $M$ to a user $u$. The higher the score the more relevance is the message. The ranking function encapsulates both the temporal and spatial proximity of $M$ to $u$. Since spatial and temporal proximity have two different domains, i.e., distance in miles and time in hours, the ranking function will normalize the spatial and temporal proximity to have a normalized domain score from 0 to a maximum score {\em Max}. The ranking function also employs a personalized preference parameter $0 \leq u.\omega \leq 1$ that weights the spatial and temporal importance of the messages to each user. Formally, the ranking function can be represented as:
+
+
+\begin{align}~\label{eq:ranking}
+ Ranking(u, M) = u.\omega \times \text{\em NormTemporal}(u.t, M.t) \notag \\
++( 1- u.\omega) \times \text{\em NormSpatial}(u.loc, M.loc)
+\end{align}
+
+
+\noindent A higher value for the user preference parameter $u.\omega$ indicates a higher weight to the temporal proximity than the spatial proximity. At one extreme, setting $u.\omega$ to~0 indicates that the user only cares about the closest $k$ messages, among the ones from $u.\cal S$, to the user's location $u.loc$, which is similar to the results of the $k$ nearest neighbors ({\em KNN} queries)~\cite{RKV95}. On the other extreme, setting $u.\omega$ to~1 indicates that the user only cares about the most recent messages, posted from any user in $u.\cal S$, which is equivalent to the traditional news feed function~\cite{STC+10}.
+
+In the mean time, {\em NormTemporal}$(u.t, M.t)$ is a normalization function that normalizes the time difference between the user logging on time $u.t$, which is NOW, and the message issue time $M.t$ to scale from~0 to a maximum scoring value {\em Max}. The temporal normalization function 

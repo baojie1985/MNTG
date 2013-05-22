@@ -1,0 +1,93 @@
+
+\section{GeoRank Message Updater}
+\label{sec:update}
+
+As has been discussed in the previous section, the {\em query processor} module mainly relies on the list of most relevant messages from the source users, $u.\cal R$, in all its pruning techniques. However, the {\em query processor} module has dealt with this list as a given input, and has nothing to do with computing and maintaining such list. In this section, we discuss {\em GeoRank message updater} module, where its main purpose is to ensure the sanity and accuracy of the list $u.\cal R$. For a user $u$, computing the most relevant message $R_s$ from a source $u_s \in u.\cal S$ includes two steps, {\em initialization} and {\em maintenance}. The {\em initialization} step takes place only when a new source user $u_s$ is followed by the user $u$. Then, $u$ will need to compute an initial value of $R_s$, based on the current list of messages from the source user $u_s$, i.e., $u_s.\cal M$. The {\em maintenance} step is triggered with each new message posted from the source user $u_s \in u.\cal S$, where we will need to check if the new message has a higher ranking score to $u$ than the current most relevant message from $u_s$.
+
+
+The challenge here comes from the fact that each new message from a source user $u_s \in u.\cal S$ is not only relevant to $u$, but, it is also relevant to all those users that consider $u_s$ as one of their sources, i.e., all the users in the follower list $u_s.\cal F$. A straightforward solution can go as follows: Once a source user $u_s$ submits a new message, we scan all the followers $u_f \in u_s.\cal F$ to check if we need to update the most relevant message with the new message for any of these users. This straightforward solution can be extremely inefficient, where users may have large number of followers and produce large number of messages, e.g., according to the Facebook statistics~\cite{website:facebookstatics}, an average user has 150 friends and creates over 90 pieces of content each month. Doing an exhaustive search of every posted message over every user's follower may be prohibitively expensive. {\em GeoRank message updater} module avoids such prohibitively expensive operations by employing spatial filters that limit the number of followers to check for. This is done by associating a set of $|u.\cal F|$ monitoring areas for user $u$, as one monitoring area per follower $u_f \in u.\cal F$. Then, whenever $u$ posts a new message $M$ at location $M.loc$, we do not need to check for all $u$'s followers. Instead, we only check on those followers, whose monitoring areas overlaps with the new message location $M.loc$.
+
+In the rest of this section, we first present the additional data structure required by the {\em GeoRank message updater} module (Section~\ref{subsec:updatedatastructure}). Then, we discuss the {\em initialization} step that sets up an initial value of each registered new source user (Section~\ref{subsec:newfollower}). Finally, we discuss the {\em maintenance} step, triggered with every new messages posted from the source user $u_s$ (Section~\ref{subsec:messageupdate}).
+
+
+
+
+\subsection{Additional Data Structures}
+\label{subsec:updatedatastructure}
+
+
+In addition to the data structures described in Section~\ref{subsec:datastructure}, the {\em message updater} module maintains the following data structure:
+
+
+\noindent \textbf{List of monitoring areas for the followers ($u.\cal A$)}, as one monitoring area for each user's follower $u_f \in u.\cal F$. A monitoring area $A_f$ for a follower $u_f$ is initialized and maintained by the {\em message updater} module to significantly reduce the computational costs for maintaining the list of most relevant messages for that follower $u_f.\cal R$. A monitoring area $A_f$ basically says that in order for a new message $M$ from user $u$ to make it to the list of most relevant messages for the follower $u_f$, then, $M$ has to be located inside $A_f$. All the follower's monitoring areas are laid out in the user's spatial grid index structure, $u.\cal G$.
+
+
+\subsection{Initialization: New Source Update}
+\label{subsec:newfollower}
+
+
+Whenever a user $u_1$ decides to follow the message updates from another user $u_2$, $u_2$ is added to the list of source users of $u_1$, i.e., $u_1.\cal S$ = $u_1.\cal S$ $\cup$ $u_2$, and, at the meanwhile, $u_1$ is added to the list of followers of $u_2$, i.e., $u_2.\cal F$ = $u_2.\cal F$ $\cup$ $u_1$. Then, the {\em message updater} module needs to take two actions: (1)~initialize the most relevant message $R_2 \in u_1.\cal R$, where $R_2$ is the most relevant (highest ranked) one to user $u_1$, among all other messages posted from $u_2$; and (2)~initialize the monitoring area $A_1 \in u_2.\cal A$ in user $u_2$, which says that any newly posted message from $u_2$ that is located outside area $A_1$ will never make it to the list of most relevant messages of $u_1$, $u_1.\cal R$. A description of these two initialization actions is outlined below:
+
+
+\noindent \textbf{Action~1: Initializing the most relevant message $R_2 \in u_1.\cal R$.} To perform this action, we need to find out the most relevant message to $u_1$, among all the ones posted by $u2$. Since all posted messages by $u_2$, $u_2.\cal M$, are sorted by their issuing times, we just scan the list $u_2.\cal M$, and calculate the score of each message based on the temporal order. We first consider the latest message as the most relevant one. Assuming that the score of this message is {\em MaxRelScore}, then we update the most relevant message whenever we find a message with a higher score than {\em MaxRelScore}, and accordingly adjust the value of {\em MaxRelScore}. Notice that a message $M_2$ with a lower temporal score than message $M_1$ can still have a higher overall score than $M_1$, if $M_2$ has a higher spatial score than $M_1$. We early terminate our scanning process if the next message to visit in $u_2.\cal M$ cannot score higher than {\em MaxRelScore}, regardless of its proximity to the location of $u_1$. In this case, we know that none of the subsequent messages in $u_2.\cal M$ will score higher than {\em MaxRelScore}, also regardless of its proximity to $u_1$. To judge on this early termination procedure, we will assume that the next message to visit $M_n$ has the maximum spatial score {\em Max}. Then, $M_n$ score will be: {\em Ranking}($u_1$,$M_n$) = $u_1.\omega$ $\times$ {\em NormTemporal($u_1$,$M_n$)} + $(1-u_1.\omega)$ $\times$ {\em Max}. This means that we can early terminate our scanning process, if this score is less than {\em MaxRelScore}, i.e., the temporal score of the next message $M_n$ is less than $\frac{MaxRelScore - (1-u_1.\omega)\times Max}{u_1.\omega}$. Finally, it is important to note that we only store the most relevant message $R_2$ in $u_1.\cal R$ without storing its score {\em MaxRelScore}. This is mainly because this score will be irrelevant when time advances, as its value is based on the temporal score, which can only be computed with the current time.
+
+
+\noindent \textbf{Action~2: Initializing the monitoring range area $A_1 \in u_2.\cal A$.} To perform this action, we will need to find an area $A_1$ such that if a new incoming message $M$ from $u_2$ is located outside $A_1$, then we can safely conclude that $M$ will never make it to the list of most relevant messages for user $u_1$, $u_1.\cal R$. We will use the most relevant message $R_2$, computed in Action~1, as an estimation of the initial value of $A_1$. We can safely say that if a new incoming message $M$ has less score than that of $R_2$, then, $M$ will have no chance in replacing $R_2$. Although we know the current exact score of $R_2$, we cannot rely on this score when comparing it with the score of the new message $M$, as the score of $R_2$ decays over time, where its issuing time becomes further. To make $R_2$ and $M$ comparable, we use a very conservative estimation of the score of $R_2$ at the time when $u_2$'s new message $M$ is issued. The conservative estimation is obtained by considering that the temporal score of $R_2$ has decayed to its lowest possible value~0. In this case, the minimum possible score of $R_2$ is {\em MinScore} = (1-$u_1.\omega$) $\times$ {\em NormSpatial}($u_1.loc$,$R_2.loc$). Then, with another conservative assumption, we assume the incoming message $M$ has the highest possible temporal score {\em Max}. Then, for $M$ to have a higher score than $R_2$, the following criteria should hold: {\em Ranking}($u_1$,$M$) $>$ {\em MinScore}, i.e., $u_1.\omega$ $\times$ {\em Max} + $(1-u_1.\omega)$ $\times$ {NormSpatial($u_1$,$M$)} $>$ {\em MinScore}. This means that $A_1$ is a circular centered at $u_1.loc$ with a radius $A_1.r$, computed per the following equation:
+
+
+\begin{equation}~\label{eq:monitor}
+A_1.r =\text{\em NormSpatial}^{-1}(  \frac {\text{\em MinScore}- u_1.\omega \times\text{\em Max}}{1-u_1.\omega}),
+\end{equation}
+
+Finally, the computed monitoring area $A_1$ is laid out on the source user's grid spatial index $u_2.\cal G$.
+
+
+\begin{algorithm} [t]
+\caption{GeoRank Message Updating}
+\label{alg:update}
+\begin{small}
+\textbf{Input:} A message $M$ posted by user $u$
+
+\begin{algorithmic}[1]
+\STATE {\em AffectedList} $\leftarrow$ $\phi$
+\label{alg2:startstep1}
+\STATE $C$ $\leftarrow$ The grid cell in $u.\cal G$ that includes $M.loc$
+\FOR{\textbf{each} monitoring area $A_f \in u.\cal A$ located in cell $C$}
+    \IF{$M.loc$ is inside $A_f$}
+        \STATE {\em AffectedList} $\leftarrow$ {\em AffectedList} $\cup$ $u_f$
+    \ENDIF
+\ENDFOR
+\label{alg2:endstep1}
+
+\FOR{\textbf{each} follower $u_f$ $\in$ {\em AffectedList}}
+\label{alg2:startstep2}
+    \STATE $R_u$ $\leftarrow$ Retrieve $u$'s most relevant message to $u_f$ from $u_f.\cal R$
+    \STATE {\em MostRelScore} $\leftarrow$ $u_f.\omega$ $\times$ {\em NormTemporal}(NOW,$R_u.time$) + (1-$u_f.\omega$) $\times$ {\em NormSpatial}($u_f.loc$,$R_u.loc$)
+    \STATE {\em NewMsgScore} $\leftarrow$ $u_f.\omega$ $\times$ {\em Max} + (1-$u_f.\omega$) $\times$ {\em NormSpatial}($u_f.loc$,$M.loc$)
+    \IF{{\em NewMsgScore} $>$ {\em MostRelScore}}
+      \STATE $R_u$ $\leftarrow$ $M$ in $u_f.\cal R$
+      \STATE {\em MinScore} $\leftarrow$ (1-$u_f.\omega$) $\times$ {\em NormSpatial}($u_f.loc$,$M.loc$)
+      \STATE $A_f.r$ $\leftarrow$ {\em NormSpatial}$^{-1}$($\frac{MinScore - u_f.\omega \times(\text{\em Max})}{1-u_f.\omega}$)
+    \ENDIF
+\ENDFOR
+\label{alg2:endstep2}
+\end{algorithmic}
+\end{small}
+\end{algorithm}
+
+\subsection{Maintenance: New Message Update}
+\label{subsec:messageupdate}
+
+
+Whenever a user $u$ posts a new message $M$, $u$ needs to check if $M$ will affect any of the most relevant messages $R_u$ stored at the user's followers, $u.\cal F$ . If so, we update the most relevant messages accordingly for the affected followers, along with their corresponding monitoring areas stored at $u$.
+
+
+\noindent \textbf{Main idea.} The main idea of the maintenance step is to exploit the grid spatial index structure maintained at $u$, $u.\cal G$, to early prune those followers that will not be affected by the new message $M$. Such early pruning avoids an exhaustive scan operation over all followers of $u$. For those followers who are not pruned, we will still do an extra check to see if $M$ will actually affect their most relevant message from $u$, as we used the conservative way to calculate the monitoring areas for the followers. If this is the case, we will update the most relevant message for the follower with the new message. Finally, we will use the updated most relevant message to calculate a new monitoring area for such followers, in a similar way to the initialization module discussed in section~\ref{subsec:newfollower}.
+
+
+
+\noindent \textbf{Algorithm.} Algorithm~\ref{alg:update} gives the pseudo code for the {\em message updater} module upon receiving a new message $M$ from user $u$. The pseudo code has two main steps:
+
+(1)~Finding out the list of followers that may be affected by the new posted message $M$ (Lines~\ref{alg2:startstep1} to~\ref{alg2:endstep1} in Algorithm~\ref{alg:update}). We do so by first locating the cell $C$ in $u.\cal G$ that includes the message location $M.loc$. Then, for any follower $u_f$ whose monitoring area $A_f$ is registered in cell $C$, we do an extra check to see if $M.loc$ is located inside $A_f$. If this is the case, we add the follower $u_f$ to the list of affected followers.
+
+(2)~For each affected follower $u_f$, we update its most relevant message $R_u$ with the new message $M$ posted from $u$, if needed. In case that the message update takes place, we also update the monitoring area $A_f$ at user $u$ (Lines~\ref{alg2:startstep2} to~\ref{alg2:endstep2} in Algorithm~\ref{alg:update}). We do so by doing the following for each user $u_f$ in the list of affected followers: (a)~We retrieve $R_u$ from the list $u_f.\cal R$ as the current most relevant message from user $u$ to follower $u_f$, (b)~As we do not have the score of $R_u$, we will need to calculate $R_u$ score (i.e., {\em MostRelScore}) based on the current time and the follower location. It is important to note that we could not store this score with $R_u$ as it decays over time, and has to be recomputed with every time instance. Thus, we opt to compute it only when needed, (c)~We compute the score of the new message $M$ (i.e., {\em NewMsgScore}) considering that the temporal score is of a maximum value as $M$ is just posted now, while the spatial score is computed based on the proximity of message location to the follower's location $u_f.loc$, and (d)~We compare the score of the most relevant message ({\em MostRelScore}) against that of the new message $M$ ({\em NewMsgScore}). If the new message has a lower score, we just do nothing, as the new message will not aff
