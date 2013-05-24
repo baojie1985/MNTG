@@ -1,0 +1,8 @@
+ID	627
+User	baojie@cs.umn.edu
+Model	Brinkhoff
+Box	44.8129015040374,-92.6022988125,45.1281723789656,-93.9206581875
+Area	"1013 Southeast University Avenue, Minneapolis, MN 55414, USA".
+Starting	5
+Time	20
+Additional	5
