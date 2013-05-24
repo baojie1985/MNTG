@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0045)http://www-users.cs.umn.edu/~sarwat/twinsgen/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<title>MinnesotaTG</title>
+<link rel="stylesheet" type="text/css" href="./TwinsGen_files/main.css">
+<script type="text/javascript" async="" src="./TwinsGen_files/in.php"></script></head>
+
+<body>
+
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+         <div id="header">
+		               <img src="./TwinsGen_files/minlogo.png" width="130" height="80">	 
+
+		      <font size="6">MinnesotaTG: Web-based U.S. Road Traffic Generator</font>
+			   
+		 </div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Content -->
+		 <div id="content">
+        <h2>Project Overview</h2> 
+         <a href="http://siwa-umh.cs.umn.edu/" target="_blank">MinnesotaTG</a> is a project developed at the <a href="http://www1.umn.edu/twincities/index.html" target="_blank">University of Minnesota</a>. MinnesotaTG is built based on two existing traffic generators: (1) <a href="http://dna.fernuni-hagen.de/secondo/BerlinMOD/BerlinMOD.html" target="_blank">BerlinMod </a> and (2) <a href="http://iapg.jade-hs.de/personen/brinkhoff/generator/" target="_blank">Thomas-Brinkhoff</a>. The purpose of MinnesotaTG is to take an arbitrary region in the United States and generate traffic data from that region.  Without this tool, generating this traffic is a complicated and drawn out process because of the number of configuration steps necessary to get either Thomas-Brinkhoff or BerlinMod both up and running, and able to work on a user specified region.  The generation of the traffic is not done by the tool itself, but rather it is performed by these two different traffic generators.
+
+<br><br>
+</p><h3>How to Get?</h3>
+To generate traffic using TwisGen, you don't need to download, build, or run code. All you have to do is to access the web interface provided in the following link:
+<a href="http://siwa-umh.cs.umn.edu/" target="_blank">MinnesotaTG: Web-based U.S. Road Traffic Generator </a> <br>
+For more information about the web interface, please continue reading the following description
+         
+<br><br>
+<h3>What are the Input Parameters ?</h3>
+The primary input to the traffic generator is the bounds of the region that traffic should be generated for.  Thomas-Brinkhoff and BerlinMod each have their own input parameters that they use as well.  Thomas-Brinkhoff uses parameters that deal with the number of moving objects that should be started with, and then the number that should be added at each time stamp.  It also allows to for specifying the amount of distance a moving object is allowed to travel between each timestamp.  Finally, the total number of timestamps can be specified as well. BerlinMod unifies all of the properties into a single scale factor which all of the other properties derive from.  Some of the other properties include number of cars and the number of days to simulate. BerlinMod has both a region and network based generation, but for the purposes of the traffic generator tool, only the network based generation is used.
+<br><br>
+<img src="./TwinsGen_files/request.png" alt="some_text" width="900" height="500">
+
+<br><br>
+<h3>How  is the Traffic Generated ?</h3>
+Shape files are provided by the U.S. government for the more than 3,500 counties in the 50 states.  Both of the traffic generators have a relatively easy time generating data on a particular shape file (after it has been converted to their respective formats).  However, when the region specified by a user spans multiple counties and county fragments, the generation becomes much more complicated.
+
+<br><br>
+<h3>What is the Output ?</h3>
+The output from the traffic generator is a visualization of the moving cars using Google Maps v3 API's with their HTML overlay feature drawing the cars themselves at specific pixels of the map.  It is also possible to download the results of the traffic data in a format which is the same for the two generators, including object ids, timestamps, latitude, and longitude coordinates.
+The results for both of the generators are stored in the unified format mentioned above inside a MySQL database.
+
+Traffic visualization is done using Google Maps v3 API for displaying overlays in HTML.  The data is loaded via ajax into the web page which then creates an overlay for each time stamp of the traffic results.  Overlays are a Google map concept and can consist of many different types of data.  In this case, document fragments are created for each object (car) at a time stamp, which is then added to the overlay for that time stamp.  When the data is being animated, it simply consists of displaying the corresponding overlay to the time stamp and hiding the remaining overlays.  Overlays are used instead of traditional markers because of the speed at which they can be loaded in comparison to the maps built-in markers.
+
+<br><br>
+<img src="./TwinsGen_files/results1.png" alt="some_text" width="900" height="500">
+
+	           <!--<a href="#">Download this CSS Layout</a>-->
+		 
+		 </div>
+		 <!-- Begin Content -->
+		 
+   </div>
+   <!-- End Wrapper -->
+ 
+<div id="disclaimer" style="font-weight: normal; clear: both; margin-top: 25px; font-size: small; font-style: italic;"><p>The views and opinions expressed in this page are strictly those of the page author.<br>The contents of this page have not been reviewed or approved by the University of Minnesota.</p></div>
+
+</body></html>

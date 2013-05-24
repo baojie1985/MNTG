@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/Lokal/Forschung/Projekte/Generator21/RunTime21/generator21x.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/Generator21/GeneratorJar.jardesc" exportErrors="false" exportWarnings="true" overwrite="true" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=Generator21/&lt;spatial{BasicSpatialQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableObjects.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatialdb{DefaultGeometryFactory.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{LayerWindowQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{Num.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{LayerScaleWindowQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{OracleDataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{PathEdge.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{IsContainedQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ReRoute.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ConstantDataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableSymbol.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{DupHashtable.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{RegionQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{VisualizedSpatialSearchTreeObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatialdb{SpatialResultSet.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;showmap{ShowMap.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;showmap{LoadDrawables.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;index{Query.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{RTreeStrategy.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{DataSpace.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{DataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{EntryReader.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{OracleSpatialDataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ExternalObjects.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ExternalObjectGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{LayerSpatialSearchTreeObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{CPUTimer.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{Sortable.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{Nodes.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{MBR.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{PositionReporter.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{BorderHeap.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{StandardWeightManager.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{OracleReporter.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{DataReader.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{Node.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{DupHashtableEnumerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{MovingObjects.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ObjectGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{Reporter.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawablePresentation.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableRectangle.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{WeightManager.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableObjectType.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{WindowQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{LayerQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SimpleRTreeStrategy.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{Time.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{EntryWriter.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatialdb{PreparedSpatialStatement.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableLine.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{MovingObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ExternalObjectClasses.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{RandomGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{WeightManagerForDataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{ColorDefiner.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{Timer.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{Edges.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{NodeDataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{AllQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{LayerAllQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SpatialSearchTree.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{StandardFileFilter.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableObjectsWithSearchTree.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SpatialSearchTreeNode.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawablePolyline.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SelectQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{MemoryRTreeNode.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{BufferedEntryReader.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{NearestNeighborQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{EntryReadable.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{EntryInput.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SpatialSearchTreeQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableBitmap.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawablePolygon.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{FilledDrawable.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{Edge.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SpatialQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ObjectClasses.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{Drawable.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{NodeReporter.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;util{DupHashtableEntry.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatialdb{GeometryConversion.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SpatialSearchTreeEntry.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{SpatialSearchTreeObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{MemoryRTree.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableText.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;showmap{ShowNetworkMap.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;routing{Network.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{EdgeClasses.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{MovingSpatialSearchTreeObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ExternalObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{DefaultDataGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableCircle.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;spatial{ExactMatchQuery.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableObject.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;generator2{ConstantObjectGenerator.java"/>
+<javaElement handleIdentifier="=Generator21/&lt;drawables{DrawableSpatialSearchTreeObject.java"/>
+</selectedElements>
+</jardesc>

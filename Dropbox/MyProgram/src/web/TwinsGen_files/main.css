@@ -1,0 +1,42 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+.introlink{
+text-decoration:none;
+color: #800000;
+}
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ width: 910px;
+ color: #FFA500;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 100px;
+ margin: 10px 0px 5px 0px;
+ background: #800000;
+}
+#content { 
+ width: 910px;
+ color: #333;
+ border: 1px solid #ccc;
+ background: #F2F2E6;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}

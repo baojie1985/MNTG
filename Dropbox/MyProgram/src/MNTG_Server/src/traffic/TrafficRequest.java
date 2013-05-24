@@ -396,7 +396,7 @@ public class TrafficRequest {
         } else if ("Brinkhoff".equals(myname)) {
             result += "Starting Vehicles: " + this.getObjBegin() + "\n";
             result += "Simulating Time: " + this.getMaxTime() + "\n";
-            result += "Additional Vehicles per time unite: " + this.getObjPerTime() + "\n\n";
+            result += "Additional Vehicles per time unit: " + this.getObjPerTime() + "\n\n";
             /*
              * result += "Edge File: http://siwa-umh.cs.umn.edu" + "/downloads/"
              * + this.getRequestId() + ".edge. \n" + "Nodes File:
@@ -457,6 +457,14 @@ public class TrafficRequest {
      *
      * @return
      */
+      public String getInorderCoordinates() {
+       String result =null;
+       result=this.lowerlat+" "+this.upperlong+" "+this.upperlat+" "+this.lowerlong;
+       return result;
+               
+    }
+      
+      
     public boolean contains(double lat, double lng) {
         return !(lat > getUpperlat() || lat < getLowerlat()
                 || lng < getUpperlong() || lng > getLowerlong());

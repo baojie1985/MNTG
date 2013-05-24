@@ -129,7 +129,7 @@ public class Emailer {
                     + ConnectionProvider.HOST_NAME
                     + "/traffic_results/view_results/"
                     + trafficRequest.getRequestId() + ". Please be adviced, the visualization maybe very slow or fail, when the data file is large\r\n\n"
-                    + "If you any comments, please leave your feedback on http://mntg.cs.umn.edu or email us at mntg@cs.umn.edu.\r\n\r\n"
+                    + "If you have any comments, please leave your feedback on http://mntg.cs.umn.edu or email us at mntg@cs.umn.edu.\r\n\r\n"
                     + "Thanks for using our traffic generator,\r\n"
                     + "UMN DMLab Team", "text/plain");
         } else {

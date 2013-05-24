@@ -60,7 +60,7 @@ public class BrinkhoffGenerator extends AbstractTrafficGenerator {
     public BrinkhoffGenerator(TrafficRequest trafficRequest) {
 
         this.requestid = trafficRequest.getRequestId();
-        new File("/home/yackel/TrafficGenerator/" + this.requestid + "/").mkdir();
+       
         GENERATED_FOLDER = "/home/yackel/TrafficGenerator/" + this.requestid + "/";
         GENERATED_SHAPE_FILES = new File("/home/yackel/TrafficGenerator/" + this.requestid + "/");
         GENERATED_FILE_NAME = new File("/home/yackel/TrafficGenerator/" + this.requestid + "/output.txt");
@@ -97,13 +97,9 @@ public class BrinkhoffGenerator extends AbstractTrafficGenerator {
             sb.append(countyFile.getAbsolutePath()).append(" ");
         }
 
-        ProcessLauncher.exec("java -classpath " + SHAPE_NETWORK_FILE_MANAGER_CLASSPATH
-                + " conversion.ShapeNetworkFileManager "
-                + sb.toString(), false);
-        
-        System.out.println("java -classpath " + SHAPE_NETWORK_FILE_MANAGER_CLASSPATH
-                + " conversion.ShapeNetworkFileManager "
-                + sb.toString());
+        //ProcessLauncher.exec("java -classpath " + SHAPE_NETWORK_FILE_MANAGER_CLASSPATH                + " conversion.ShapeNetworkFileManager "                + sb.toString(), false);
+        ProcessLauncher.exec("java -jar /home/yackel/TrafficGenerator/Test_Jie/RoadConverter.jar " +GENERATED_FOLDER, false);
+        System.out.println("java -jar /home/yackel/TrafficGenerator/Test_Jie/RoadConverter.jar " +GENERATED_FOLDER);
         
         //ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/output.* /home.yackel/TrafficGenerator/"+this.requestid+"/", false);
         //System.out.println("cp /home/yackel/TrafficGenerator/output.* /home/yackel/TrafficGenerator/"+this.requestid+"/");

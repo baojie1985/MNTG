@@ -1,0 +1,2 @@
+"request_id","email","hostname","request_timestamp","download_count","response_time","city","region_name","country_name","generation_area","Scale_Factor","Beginning_Moving_Objects","Beginning_External_Objects","Moving_Objects_Per_Time_Unit","External_Objects_Per_Time_Unit","Classes_Count_of_Moving_Objects","Classes_Count_of_External_Objects","Time_Units","Report_Probability","Max_Speed_Div"
+"449","amr@cs.umn.edu","sphinx.cs.umn.edu","2012-10-03 14:57:33","0","0.00","Minneapolis","Minnesota","United States","Hennepin, MN, USA","","5","0","5","0","6","3","20","1000","50"
