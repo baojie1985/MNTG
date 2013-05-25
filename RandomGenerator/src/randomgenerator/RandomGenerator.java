@@ -667,7 +667,7 @@ public class RandomGenerator {
         FileWriter fw = null;
         PrintWriter pw = null;
         try {
-            File outFile = new File(path + "/output.txt");
+            File outFile = new File(path + ID + "/output.txt");
             
             fw = new FileWriter(outFile);
             pw = new PrintWriter(fw);
@@ -692,7 +692,7 @@ public class RandomGenerator {
             */
         }
         
-        tigerReaderOutput(path + "/tiger_processed_1_nodes.txt", path + "/tiger_processed_1_edge.txt");
+        tigerReaderOutput(path + ID + "/tiger_processed_" + ID + "_nodes.txt", path + ID + "/tiger_processed_" + ID + "_edge.txt");
         InitializeObjects(TR, pw);
         CreateTraffic(TR, pw);
         pw.close();
