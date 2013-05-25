@@ -1,0 +1,8 @@
+﻿ID	828
+User	baojie@cs.umn.edu
+Model	Brinkhoff
+Box	21.3273619,39.9973439,21.6107782,39.7300204
+Area	"2747, Wadi Jalil, Mecca 24239 7769, Saudi Arabia".
+Starting	1000
+Time	20
+Additional	5
