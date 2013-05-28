@@ -423,8 +423,8 @@ public class TigerReader {
         createDirectory(path + id + "/");
         
         //new files for the output of the road network
-        File outFileNode = new File(path + "tiger_processed_" + id + "_nodes.txt");
-        File outFileEdge = new File(path + "tiger_processed_" + id + "_edge.txt");
+        File outFileNode = new File(path + id + "/tiger_processed_" + id + "_nodes.txt");
+        File outFileEdge = new File(path + id + "/tiger_processed_" + id + "_edge.txt");
         
         FileWriter fwNode = null;
         FileWriter fwEdge = null;

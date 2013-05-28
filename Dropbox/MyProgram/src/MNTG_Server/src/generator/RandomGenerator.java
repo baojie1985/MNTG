@@ -6,9 +6,13 @@ package generator;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import traffic.TrafficRequest;
 import traffic.TrafficResult;
 import util.ProcessLauncher;
@@ -22,9 +26,11 @@ public class RandomGenerator extends AbstractTrafficGenerator{
         private boolean hasTraffic;
         
         
-        private static final String RANDOMGENERATORJAR = "/path/to/generator/RandomGenerator.jar";
+        private static final String RANDOMGENERATORJAR = "/home/yackel/TrafficGenerator/RandomGenerator.jar";
     	
-        private static final String WEBSERVERPATH = "/path/to/webserver/";
+        private static final String TIGERREADERJAR = "/home/yackel/TrafficGenerator/TigerReader.jar";
+        
+        private static final String WEBSERVERPATH = "/home/yackel/TrafficGenerator/";
         
         @Override
         public List<TrafficResult> getTraffic(TrafficRequest trafficRequest)
@@ -53,10 +59,23 @@ public class RandomGenerator extends AbstractTrafficGenerator{
             List<TrafficResult> traffic = new ArrayList<TrafficResult>();
             
             
+            try {            
+                br = new BufferedReader(new FileReader(output));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(RandomGenerator.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            
             try 
             {
                 while ((line = br.readLine()) != null)
                 {
+                    
+                    if (line.equals("\n"))
+                    {
+                        continue;
+                    }
+
                     if (first_line)
                     {
                         first_line = false;
@@ -88,6 +107,11 @@ public class RandomGenerator extends AbstractTrafficGenerator{
                 System.out.println(e.toString());
             }
             
+            
+            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/tiger_processed_"+trafficRequest.getRequestId()+"_nodes.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+".edge", false);
+            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/tiger_processed_"+trafficRequest.getRequestId()+"_edge.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+".node", false);
+            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/output.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+"_output.txt", false);
+            
             return traffic;
             
         }
@@ -116,6 +140,26 @@ public class RandomGenerator extends AbstractTrafficGenerator{
              * lwlng - ##
              * 
              */
+            
+            StringBuffer sb = new StringBuffer();
+            
+            for (File countyFile : getCounties(trafficRequest)) {
+                sb.append(countyFile.getAbsolutePath()).append(" ");
+            }
+            
+            ProcessLauncher.exec("java -jar " + TIGERREADERJAR + " "
+                    + WEBSERVERPATH + " " + trafficRequest.getRequestId() + " "
+                    + trafficRequest.getUpperlat() + " " + trafficRequest.getUpperlong() + " "
+                    + trafficRequest.getLowerlat() + " " + trafficRequest.getLowerlong() + " "
+                    + sb.toString(), false);
+            
+            System.out.println("java -jar " + TIGERREADERJAR + " "
+                    + WEBSERVERPATH + " " + trafficRequest.getRequestId() + " "
+                    + trafficRequest.getUpperlat() + " " + trafficRequest.getUpperlong() + " "
+                    + trafficRequest.getLowerlat() + " " + trafficRequest.getLowerlong() + " "
+                    + sb.toString());
+            
+            
             ProcessLauncher.exec("java -jar " + RANDOMGENERATORJAR + " "
                     + WEBSERVERPATH + " " + trafficRequest.getRequestId() + " "
                     + trafficRequest.getObjBegin() + " "

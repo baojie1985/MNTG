@@ -4,7 +4,7 @@
  */
 package randomgenerator;
 
-import connection.provider.ConnectionProvider;
+//import connection.provider.ConnectionProvider;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.File;
@@ -65,7 +65,7 @@ public class RandomGenerator {
     
     public static final String DOWNLOAD_PATH = "/home/yackel/public_html/app/webroot/downloads/";
     
-    public static Connection conn = ConnectionProvider.getConnection();
+    //public static Connection conn = ConnectionProvider.getConnection();
     public static PreparedStatement pStatement = null;
     
     //public static final String DOWNLOAD_PATH = "/Users/nagell2008/Downloads/";
@@ -97,6 +97,7 @@ public class RandomGenerator {
      * 
      * @param trafficRequest 
      */
+    /*
     public static void generateShapeFiles(TrafficRequest trafficRequest, String path) {
         
         StringBuffer sb = new StringBuffer();
@@ -121,10 +122,12 @@ public class RandomGenerator {
                 + sb.toString());
          
     }
-    
+    */
     /**
      * Gets a list of all the counties in the selected area.
      */
+    
+    /*
     public static List<File> getCounties(TrafficRequest trafficRequest) {
         List<File> counties = new ArrayList<File>();
         Connection conn = ConnectionProvider.getConnection();
@@ -150,7 +153,7 @@ public class RandomGenerator {
         System.out.println(counties);
         return counties;
     }
-    
+    */
     /**
      * Copies over the edge and node files that RoadTrans generates
      * @param fromPath - location of files
@@ -361,7 +364,7 @@ public class RandomGenerator {
                         + "\t" + temp.getCurrentPos().Latitude
                         + "\t" + temp.getCurrentPos().Longitude);
             
-            insertIntoDB(tr.getRequestId(), temp.getObjecttype(), temp.getId(), 0, temp.getCurrentPos().Latitude, temp.getCurrentPos().Longitude);
+            //insertIntoDB(tr.getRequestId(), temp.getObjecttype(), temp.getId(), 0, temp.getCurrentPos().Latitude, temp.getCurrentPos().Longitude);
             
             temp.setObjecttype(MovingObject.ObjectType.point);
         
@@ -480,7 +483,7 @@ public class RandomGenerator {
                         + "\t" + currentObject.getCurrentPos().Latitude
                         + "\t" + currentObject.getCurrentPos().Longitude);
                 
-                insertIntoDB(tr.getRequestId(), currentObject.getObjecttype(), currentObject.getId(), i, currentObject.getCurrentPos().Latitude, currentObject.getCurrentPos().Longitude);
+                //insertIntoDB(tr.getRequestId(), currentObject.getObjecttype(), currentObject.getId(), i, currentObject.getCurrentPos().Latitude, currentObject.getCurrentPos().Longitude);
                 
                 
             }
@@ -601,7 +604,7 @@ public class RandomGenerator {
         return;
     }
     
-    
+    /*
     public static void insertIntoDB(int request_id, MovingObject.ObjectType t, int object_id, int timestamp, double lat, double lng)
     {
         
@@ -634,7 +637,7 @@ public class RandomGenerator {
         
         return;
     }
-    
+    *
     
     /**
      * @param args the command line arguments
@@ -703,19 +706,20 @@ public class RandomGenerator {
             
         }
 
+        /*
         try
         {
-            pStatement.executeBatch();
-            pStatement.clearBatch();
+            //pStatement.executeBatch();
+            //pStatement.clearBatch();
         }
         catch (SQLException e)
         {
             throw new IllegalStateException("Failed to insert traffic results.");
         } finally {
-                ConnectionProvider.safeClose(pStatement);
+                //ConnectionProvider.safeClose(pStatement);
                 pStatement = null;
         }
-
+        */
         //copyFiles(path, DOWNLOAD_PATH, ID);
         
     }

@@ -10,6 +10,8 @@ public class TrafficGeneratorFactory {
                 return new BrinkhoffGenerator(trafficRequest);
             case BerlinMod:
                 return new BerlinModGenerator();
+            case Random:
+                return new RandomGenerator();
             default:
                 throw new IllegalArgumentException("Not a recognized generator.");
         }

@@ -295,6 +295,12 @@ public class TrafficRequest {
      * @return the trafficType
      */
     public TrafficType getTrafficType() {
+        
+        if (getNumObjClasses() == -17)
+        {
+            return TrafficType.Random;
+        }
+        
         if (getNumObjClasses() > 0) {
             return TrafficType.Brinkhoff;
         } else {
