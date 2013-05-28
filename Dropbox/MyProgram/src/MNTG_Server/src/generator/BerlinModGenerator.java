@@ -1,8 +1,11 @@
 package generator;
 
+import java.awt.geom.Point2D;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -247,6 +250,43 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    
+    private void processOSMFile(File nodeFile, File edgeFile, FileWriter writer,
+        TrafficRequest trafficRequest) {
+      try {
+        // Read all nodes
+        Map<Long, Point2D.Double> nodes = new HashMap<Long, Point2D.Double>();
+        BufferedReader reader = new BufferedReader(new FileReader(nodeFile.getAbsolutePath()));
+        String line;
+        while ((line = reader.readLine()) != null) {
+          String[] parts = line.split(",");
+          Long nodeId = Long.parseLong(parts[0]);
+          Point2D.Double coords = new Point2D.Double(
+              Double.parseDouble(parts[1]), Double.parseDouble(parts[2]));
+          nodes.put(nodeId, coords);
+        }
+        reader.close();
+        
+        // Read all edges and write directly to output files
+        reader = new BufferedReader(new FileReader(edgeFile.getAbsolutePath()));
+        
+        writer.write("(50.0(\n");
+        while ((line = reader.readLine()) != null) {
+          String[] parts = line.split(",");
+          //long edgeId = Long.parseLong(parts[0]);
+          Point2D.Double node1 = nodes.get(Long.parseLong(parts[1]));
+          Point2D.Double node2 = nodes.get(Long.parseLong(parts[2]));
+          writer.write(String.format("(%g %g %g %g)\n", node1.x, node1.y, node2.x, node2.y));
+        }
+        writer.write("))\n");
+      
+        reader.close();
+      } catch (FileNotFoundException e) {
+        throw new RuntimeException(e);
+      } catch (IOException e) {
+        throw new RuntimeException(e);
+      }
     }
 
     private void writeStreets(List<String> streets, FileWriter writer) {
