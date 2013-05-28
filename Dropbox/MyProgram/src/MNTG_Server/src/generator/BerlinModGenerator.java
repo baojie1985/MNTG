@@ -18,6 +18,7 @@ import util.ProcessLauncher;
 public class BerlinModGenerator extends AbstractTrafficGenerator {
 
     public static String SECONDO_BIN_DIRECTORY = "/home/yackel/secondo/bin";
+    public static String REQUEST_INPUT_FOLDER = "/home/yacket/TrafficGenerator";
     public static String DATA_FILE_HEADER = "(OBJECT streets () (rel (tuple ((Vmax real)(geoData line))))(\n";
     public static String STREET_HEADER = "(50.0(";
     public static String STREET_FOOTER = "\n";
@@ -116,9 +117,16 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
 
             streetsDataWriter.write(DATA_FILE_HEADER);
 
-            for (File county : counties) {
-                proccessCounty(county, streetsDataWriter, trafficRequest);
-            }
+            // OLD: Convert data from TIGER shape format to SECONDO format
+//            for (File county : counties) {
+//                proccessCounty(county, streetsDataWriter, trafficRequest);
+//            }
+            // Convert data from OSM file format to SECONDO format
+            File requestPath = new File(REQUEST_INPUT_FOLDER, String.valueOf(trafficRequest.getRequestId()));
+            File nodeFile = new File(requestPath, "node.txt");
+            File edgeFile = new File(requestPath, "edge.txt");
+            processOSMFile(nodeFile, edgeFile, streetsDataWriter, trafficRequest);
+            
             streetsDataWriter.write(DATA_FILE_FOOTER);
             streetsDataWriter.close();
 
@@ -260,10 +268,11 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
         BufferedReader reader = new BufferedReader(new FileReader(nodeFile.getAbsolutePath()));
         String line;
         while ((line = reader.readLine()) != null) {
+          // Format of the input file is node_id, lat, lon
           String[] parts = line.split(",");
           Long nodeId = Long.parseLong(parts[0]);
           Point2D.Double coords = new Point2D.Double(
-              Double.parseDouble(parts[1]), Double.parseDouble(parts[2]));
+              Double.parseDouble(parts[2]), Double.parseDouble(parts[1]));
           nodes.put(nodeId, coords);
         }
         reader.close();
@@ -277,6 +286,7 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
           //long edgeId = Long.parseLong(parts[0]);
           Point2D.Double node1 = nodes.get(Long.parseLong(parts[1]));
           Point2D.Double node2 = nodes.get(Long.parseLong(parts[2]));
+          // Format of street file is (lon1 lat1 lon2 lat2) for each segment
           writer.write(String.format("(%g %g %g %g)\n", node1.x, node1.y, node2.x, node2.y));
         }
         writer.write("))\n");
