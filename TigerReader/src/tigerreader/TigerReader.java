@@ -221,10 +221,19 @@ public class TigerReader {
      * Reads through a tiger file (<filename>.data)
      * @param file - path to the file
      */
-    public static void readTigerFile(String file)
+    public static boolean readTigerFile(String file)
     {
         
         BufferedReader br = null;
+        
+        File county_file = new File(file);
+        
+        if (!county_file.exists())
+        {
+            return false;
+        }
+        
+        
         try {
            br = new BufferedReader(new FileReader(file));
         }
@@ -327,7 +336,7 @@ public class TigerReader {
         {
             System.out.println(e.toString());
         }
-        return;
+        return true;
     }
     
     /**
@@ -452,7 +461,7 @@ public class TigerReader {
         Nodes = new HashMap<Long, ArrayList<Node>>();
         Edges = new HashMap<Long, Edge>();
         
-        
+        boolean readFile = false;
         /*
          * The remaining arguements after the first 6 will be the county files
          */
@@ -464,7 +473,7 @@ public class TigerReader {
             
             try
             {
-                readTigerFile(countyFile + ".data");
+                readFile = readTigerFile(countyFile + ".data");
             }
             catch (Exception e)
             {
@@ -472,7 +481,11 @@ public class TigerReader {
                 e.printStackTrace();
             }
             //writes the road network to the file
-            outputNetwork(id, pwNode, pwEdge);
+            
+            if (readFile)
+            {
+                outputNetwork(id, pwNode, pwEdge);
+            }
             
             //reset everything for the next county file
             Nodes.clear();
