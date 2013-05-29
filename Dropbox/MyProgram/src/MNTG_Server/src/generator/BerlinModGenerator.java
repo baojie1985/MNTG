@@ -18,7 +18,7 @@ import util.ProcessLauncher;
 public class BerlinModGenerator extends AbstractTrafficGenerator {
 
     public static String SECONDO_BIN_DIRECTORY = "/home/yackel/secondo/bin";
-    public static String REQUEST_INPUT_FOLDER = "/home/yacket/TrafficGenerator";
+    public static String REQUEST_INPUT_FOLDER = "/home/yackel/TrafficGenerator";
     public static String DATA_FILE_HEADER = "(OBJECT streets () (rel (tuple ((Vmax real)(geoData line))))(\n";
     public static String STREET_HEADER = "(50.0(";
     public static String STREET_FOOTER = "\n";
