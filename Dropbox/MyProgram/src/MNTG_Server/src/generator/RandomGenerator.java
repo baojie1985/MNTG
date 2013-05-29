@@ -108,8 +108,8 @@ public class RandomGenerator extends AbstractTrafficGenerator{
             }
             
             
-            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/tiger_processed_"+trafficRequest.getRequestId()+"_nodes.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+".edge", false);
-            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/tiger_processed_"+trafficRequest.getRequestId()+"_edge.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+".node", false);
+            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/tiger_processed_"+trafficRequest.getRequestId()+"_nodes.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+".node", false);
+            ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/tiger_processed_"+trafficRequest.getRequestId()+"_edge.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+".edge", false);
             ProcessLauncher.exec("cp /home/yackel/TrafficGenerator/"+trafficRequest.getRequestId()+"/output.txt /home/yackel/public_html/app/webroot/downloads/"+trafficRequest.getRequestId()+"_output.txt", false);
             
             return traffic;
