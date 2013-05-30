@@ -141,6 +141,7 @@ public class RandomGenerator extends AbstractTrafficGenerator{
              * 
              */
             
+            /*
             StringBuffer sb = new StringBuffer();
             
             for (File countyFile : getCounties(trafficRequest)) {
@@ -159,7 +160,7 @@ public class RandomGenerator extends AbstractTrafficGenerator{
                     + trafficRequest.getLowerlat() + " " + trafficRequest.getLowerlong() + " "
                     + sb.toString());
             
-            
+            */
             ProcessLauncher.exec("java -jar " + RANDOMGENERATORJAR + " "
                     + WEBSERVERPATH + " " + trafficRequest.getRequestId() + " "
                     + trafficRequest.getObjBegin() + " "

@@ -5,6 +5,7 @@
 package randomgenerator;
 
 //import connection.provider.ConnectionProvider;
+import java.awt.geom.Point2D;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.File;
@@ -22,6 +23,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -423,8 +425,8 @@ public class RandomGenerator {
                 System.out.println("Node1 ID: " + Nodes.get(Edges.get(edgeId).Node1).ID);
                 System.out.println("Node2 ID: " + Nodes.get(Edges.get(edgeId).Node2).ID);
                 */
-                System.out.println(edgeId);
-                System.out.println(Edges.containsKey(edgeId));
+                //System.out.println(edgeId);
+                //System.out.println(Edges.containsKey(edgeId));
                 /*
                 while ( Nodes.get(Edges.get(edgeId).Node1).ID != currentObject.getLastPos().ID && Nodes.get(Edges.get(edgeId).Node2).ID != currentObject.getLastPos().ID )
                 {
@@ -525,17 +527,25 @@ public class RandomGenerator {
                     continue;
                 }
                 
-                //TODO: Insert nodes and edges
                 
-                String[] data = line.split("\t");
+                String[] data = line.split(",");
                 
                 nodeId = Long.parseLong(data[0]);
                 lat = Double.parseDouble(data[1]);
                 lng = Double.parseDouble(data[2]);
-                edgeId = Long.parseLong(data[3]);
+                //edgeId = Long.parseLong(data[3]);
                 
-                Node newNode = new Node(nodeId, "", lat, lng);
                 
+                if (Nodes.containsKey(nodeId))
+                {
+                    continue;
+                }
+                else
+                {
+                    Node newNode = new Node(nodeId, "", lat, lng);
+                    Nodes.put(nodeId, newNode);
+                }
+                /*
                 if (Nodes.containsKey(nodeId))
                 {
                     if (!Nodes.get(nodeId).AttachedEdges.contains(edgeId))
@@ -548,6 +558,7 @@ public class RandomGenerator {
                     Nodes.put(nodeId, newNode);
                     newNode.AttachedEdges.add(edgeId);
                 }
+                */
                 
             }
         }
@@ -571,15 +582,26 @@ public class RandomGenerator {
                     continue;
                 }
                 
-                String[] data = line.split("\t");
+                String[] data = line.split(",");
                 
                 edgeId = Long.parseLong(data[0]);
                 node1 = Long.parseLong(data[1]);
-                node2 = Long.parseLong(data[1]);
+                node2 = Long.parseLong(data[2]);
                 
-                Edge newEdge = new Edge(edgeId, node1, node2);
+                //Edge newEdge = new Edge(edgeId, node1, node2);
                 
-                Edges.put(edgeId, newEdge);
+                //Edges.put(edgeId, newEdge);
+                
+                if (Nodes.containsKey(node1))
+                {
+                    Nodes.get(node1).AttachedEdges.add(node2);
+                }
+                
+                if (Nodes.containsKey(node2))
+                {
+                    Nodes.get(node2).AttachedEdges.add(node1);
+                }
+                
                 
             }
         }
@@ -604,6 +626,7 @@ public class RandomGenerator {
         return;
     }
     
+        
     /*
     public static void insertIntoDB(int request_id, MovingObject.ObjectType t, int object_id, int timestamp, double lat, double lng)
     {
@@ -695,7 +718,7 @@ public class RandomGenerator {
             */
         }
         
-        tigerReaderOutput(path + ID + "/tiger_processed_" + ID + "_nodes.txt", path + ID + "/tiger_processed_" + ID + "_edge.txt");
+        tigerReaderOutput(path + ID + "/node.txt", path + ID + "/edge.txt");
         InitializeObjects(TR, pw);
         CreateTraffic(TR, pw);
         pw.close();
