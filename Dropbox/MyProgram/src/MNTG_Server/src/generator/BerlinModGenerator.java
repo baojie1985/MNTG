@@ -259,7 +259,16 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
             throw new RuntimeException(e);
         }
     }
-    
+  
+    static class Edge {
+      public Point2D.Double node1, node2;
+
+      public Edge(Point2D.Double n1, Point2D.Double n2) {
+        this.node1 = n1;
+        this.node2 = n2;
+      }
+    };
+  
     private void processOSMFile(File nodeFile, File edgeFile, FileWriter writer,
         TrafficRequest trafficRequest) {
       try {
@@ -277,19 +286,72 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
         }
         reader.close();
         
-        // Read all edges and write directly to output files
+        // Read all edges
         reader = new BufferedReader(new FileReader(edgeFile.getAbsolutePath()));
         
-        writer.write("(50.0(\n");
+  
+        Map<String, ArrayList<Edge>> streets = new HashMap<String, ArrayList<Edge>>();
+
+        final String road_beginning = "(50.0(\n";
+        final String road_end = "))\n";
+        
         while ((line = reader.readLine()) != null) {
-          String[] parts = line.split(",");
+          String[] edge_parts = line.split(",", 4);
           //long edgeId = Long.parseLong(parts[0]);
-          Point2D.Double node1 = nodes.get(Long.parseLong(parts[1]));
-          Point2D.Double node2 = nodes.get(Long.parseLong(parts[2]));
-          // Format of street file is (lon1 lat1 lon2 lat2) for each segment
-          writer.write(String.format("(%g %g %g %g)\n", node1.x, node1.y, node2.x, node2.y));
+          Point2D.Double node1 = nodes.get(Long.parseLong(edge_parts[1]));
+          Point2D.Double node2 = nodes.get(Long.parseLong(edge_parts[2]));
+          String road_name = edge_parts[3];
+          
+          ArrayList<Edge> road_edges = streets.get(road_name);
+          if (road_edges == null) {
+            road_edges = new ArrayList<Edge>();
+            streets.put(road_name, road_edges);
+          }
+          road_edges.add(new Edge(node1, node2));
+          
         }
-        writer.write("))\n");
+        for (Map.Entry<String, ArrayList<Edge>> street : streets.entrySet()) {
+          String road_name = street.getKey();
+          
+          writer.write(road_beginning);
+          ArrayList<Edge> unordered_edges = street.getValue();
+          // Reorder edges to form a contiguous line
+          ArrayList<Edge> ordered_edges = new ArrayList<Edge>();
+          // Add a seed of the first edge
+          ordered_edges.add(unordered_edges.remove(0));
+          Point2D.Double first_node = ordered_edges.get(0).node1;
+          Point2D.Double last_node = ordered_edges.get(0).node2;
+          int size_before, size_after;
+          do { // While the list unordered_edges is growing
+            size_before = ordered_edges.size();
+            // Find one edge in unordered_edges to be moved to ordered_edges
+            int i_edge = 0;
+            while (i_edge < unordered_edges.size()) {
+              Edge candidate_edge = unordered_edges.get(i_edge);
+              if (candidate_edge.node1 == last_node) {
+                // Candidate edge can be appended
+                ordered_edges.add(candidate_edge);
+                unordered_edges.remove(i_edge);
+                last_node = candidate_edge.node2;
+              } else if (candidate_edge.node2 == first_node) {
+                // Candidate edge can be prepended
+                ordered_edges.add(0, candidate_edge);
+                unordered_edges.remove(i_edge);
+                first_node = candidate_edge.node1;
+              } else {
+                i_edge++;
+              }
+            }
+            size_after = ordered_edges.size();
+          } while (size_before != size_after);
+          
+          for (Edge e : ordered_edges) {
+            // Format of edge is (lon1 lat1 lon2 lat2) for each segment
+            writer.write(String.format("(%g %g %g %g)\n", e.node1.x, e.node1.y,
+                e.node2.x, e.node2.y));
+          }
+          writer.write(road_end);
+        }
       
         reader.close();
       } catch (FileNotFoundException e) {
