@@ -4,6 +4,8 @@
  */
 package roadconverter;
 
+import java.io.IOException;
+
 /**
  *
  * @author baojie
@@ -16,8 +18,9 @@ public class RoadConverter {
     
     /**
      * @param args the command line arguments
+     * @throws IOException 
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         
         String Path =args[0];

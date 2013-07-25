@@ -7,7 +7,7 @@ public class TrafficResult {
     private double lat;
     private double lng;
     private int time;
-    private final int RESOLUTION = 30000;
+    private final int RESOLUTION = 1000000;
 
     /**
      * @return the type
@@ -52,19 +52,21 @@ public class TrafficResult {
     }
 
     public void setLatByPoint(TrafficRequest trafficRequest, double point) {
-        double difference = trafficRequest.getUpperlat()
-                - trafficRequest.getLowerlat();
-        double proportion = point / RESOLUTION;
-        double offset = proportion * difference;
-        setLat(trafficRequest.getUpperlat() - offset);
+//        double difference = trafficRequest.getUpperlat()
+//                - trafficRequest.getLowerlat();
+//        double proportion = point / RESOLUTION;
+//        double offset = proportion * difference;
+//        setLat(trafficRequest.getUpperlat() - offset);
+      setLat(point / RESOLUTION);
     }
 
     public void setLngByPoint(TrafficRequest trafficRequest, double point) {
-        double difference = trafficRequest.getUpperlong()
-                - trafficRequest.getLowerlong();
-        double proportion = point / RESOLUTION;
-        double offset = proportion * difference;
-        setLng(trafficRequest.getUpperlong() - offset);
+//        double difference = trafficRequest.getUpperlong()
+//                - trafficRequest.getLowerlong();
+//        double proportion = point / RESOLUTION;
+//        double offset = proportion * difference;
+//        setLng(trafficRequest.getUpperlong() - offset);
+      setLng(point / RESOLUTION);
     }
 
     /**

@@ -42,8 +42,8 @@ public class RoadNetworks {
 
     private void UpdateXY() {
         for (Node n : Nodes.values()) {
-            n.x = (int)((n.Latitude - lwlat) / xinterval);
-            n.y = (int)((n.Longitude - lwlng) / yinterval);
+            n.x = (int)(n.Latitude / xinterval);
+            n.y = (int)(n.Longitude / yinterval);
          //   System.out.println(n.ToString());
         }
     }
@@ -51,6 +51,8 @@ public class RoadNetworks {
     private void GetInterval() {
         xinterval = (uplat - lwlat) / 30000;
         yinterval = (uplng - lwlng) / 30000;
+        xinterval = 1E-6;
+        yinterval = 1E-6;
     }
 
     private void ReadEdgeFile(String filename) {
@@ -159,33 +161,37 @@ public class RoadNetworks {
     }
     
     
-    public void writeNodes(String path){
+    public void writeNodes(String path) throws IOException{
         try {
             DataOutputStream myout= new DataOutputStream( new FileOutputStream(path+"output.node"));
             
             for(Node n : Nodes.values()){
                 writeNode(myout, "",  n.ID, n.x, n.y);
             }
+            
+            myout.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(RoadNetworks.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }
     
-        public void writeEdges(String path){
+        public void writeEdges(String path) throws IOException{
         try {
             DataOutputStream myout= new DataOutputStream( new FileOutputStream(path+"output.edge"));
             
             for(Edge e : Edges.values()){
                 writeEdge(myout, e.Node1, e.Node2, "", e.ID, 3);
             }
+            
+            myout.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(RoadNetworks.class.getName()).log(Level.SEVERE, null, ex);
         }
        
     }
     
-    public void output(String path){
+    public void output(String path) throws IOException {
          writeNodes(path);
          writeEdges(path);
     }

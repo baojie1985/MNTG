@@ -149,13 +149,15 @@ public class BrinkhoffGenerator extends AbstractTrafficGenerator {
                     scanner.nextInt(); // sequence number
                     scanner.nextInt(); // object class
                     trafficResult.setTime(scanner.nextInt());
-                    trafficResult.setLngByPoint(trafficRequest,
-                            scanner.nextDouble());
                     trafficResult.setLatByPoint(trafficRequest,
                             scanner.nextDouble());
+                    trafficResult.setLngByPoint(trafficRequest,
+                        scanner.nextDouble());
                     trafficResults.add(trafficResult);
                  //   outFilePrint.append(trafficResult.getId() + " " + trafficResult.getTime() + " " + trafficResult.getType() + " " + trafficResult.getLat() + " " + trafficResult.getLng() + "\n");
                 }
+                
+                bfr.close();
                 
                 //outFilePrint.close();
                 
