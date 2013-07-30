@@ -118,14 +118,15 @@ public class BerlinModGenerator extends AbstractTrafficGenerator {
             streetsDataWriter.write(DATA_FILE_HEADER);
 
             // OLD: Convert data from TIGER shape format to SECONDO format
-//            for (File county : counties) {
-//                proccessCounty(county, streetsDataWriter, trafficRequest);
-//            }
+            for (File county : counties) {
+                proccessCounty(county, streetsDataWriter, trafficRequest);
+            }
+            
             // Convert data from OSM file format to SECONDO format
-            File requestPath = new File(REQUEST_INPUT_FOLDER, String.valueOf(trafficRequest.getRequestId()));
-            File nodeFile = new File(requestPath, "node.txt");
-            File edgeFile = new File(requestPath, "edge.txt");
-            processOSMFile(nodeFile, edgeFile, streetsDataWriter, trafficRequest);
+//            File requestPath = new File(REQUEST_INPUT_FOLDER, String.valueOf(trafficRequest.getRequestId()));
+//            File nodeFile = new File(requestPath, "node.txt");
+//            File edgeFile = new File(requestPath, "edge.txt");
+//            processOSMFile(nodeFile, edgeFile, streetsDataWriter, trafficRequest);
             
             streetsDataWriter.write(DATA_FILE_FOOTER);
             streetsDataWriter.close();
