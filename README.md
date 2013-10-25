@@ -3,10 +3,15 @@ MinnesotaTG is a project developed at the University of Minnesota. MinnesotaTG i
 
 ## People
 Steven Yackel
+
 Jie Bao
+
 Amr Magdy
+
 Mohamed Sarwat
+
 Mohamed F. Mokbel
+
 Ethan Waytas
 
 
