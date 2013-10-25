@@ -2,15 +2,17 @@
 MinnesotaTG is a project developed at the University of Minnesota. MinnesotaTG is built based on two existing traffic generators: (1) BerlinMod and (2) Thomas-Brinkhoff. The purpose of MinnesotaTG is to take an arbitrary region in the United States and generate traffic data from that region. Without this tool, generating this traffic is a complicated and drawn out process because of the number of configuration steps necessary to get either Thomas-Brinkhoff or BerlinMod both up and running, and able to work on a user specified region. The generation of the traffic is not done by the tool itself, but rather it is performed by these two different traffic generators. 
 
 ## People
-Steven Yackel
+Mohamed F. Mokbel
 
 Jie Bao
+
+Ahmed Eldawy
 
 Amr Magdy
 
 Mohamed Sarwat
 
-Mohamed F. Mokbel
+Steven Yackel
 
 Ethan Waytas
 
