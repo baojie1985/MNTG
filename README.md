@@ -1,21 +1,6 @@
 ## MNTG Overview
 MinnesotaTG is a project developed at the University of Minnesota. MinnesotaTG is built based on two existing traffic generators: (1) BerlinMod and (2) Thomas-Brinkhoff. The purpose of MinnesotaTG is to take an arbitrary region in the United States and generate traffic data from that region. Without this tool, generating this traffic is a complicated and drawn out process because of the number of configuration steps necessary to get either Thomas-Brinkhoff or BerlinMod both up and running, and able to work on a user specified region. The generation of the traffic is not done by the tool itself, but rather it is performed by these two different traffic generators. 
 
-## People
-Mohamed F. Mokbel
-
-Jie Bao
-
-Ahmed Eldawy
-
-Amr Magdy
-
-Mohamed Sarwat
-
-Steven Yackel
-
-Ethan Waytas
-
 
 ## Related Links
 BerlinMod Traffic Generator <http://dna.fernuni-hagen.de/secondo/BerlinMOD/BerlinMOD.html>
@@ -54,3 +39,18 @@ Shape files are provided by the U.S. government for the more than 3,500 counties
 
 ### What is the Output ?
 The output from the traffic generator is a visualization of the moving cars using Google Maps v3 API's with their HTML overlay feature drawing the cars themselves at specific pixels of the map. It is also possible to download the results of the traffic data in a format which is the same for the two generators, including object ids, timestamps, latitude, and longitude coordinates. The results for both of the generators are stored in the unified format mentioned above inside a MySQL database. Traffic visualization is done using Google Maps v3 API for displaying overlays in HTML. The data is loaded via ajax into the web page which then creates an overlay for each time stamp of the traffic results. Overlays are a Google map concept and can consist of many different types of data. In this case, document fragments are created for each object (car) at a time stamp, which is then added to the overlay for that time stamp. When the data is being animated, it simply consists of displaying the corresponding overlay to the time stamp and hiding the remaining overlays. Overlays are used instead of traditional markers because of the speed at which they can be loaded in comparison to the maps built-in markers. 
+
+## People
+Mohamed F. Mokbel
+
+Jie Bao
+
+Ahmed Eldawy
+
+Amr Magdy
+
+Mohamed Sarwat
+
+Steven Yackel
+
+Ethan Waytas
