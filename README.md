@@ -24,19 +24,19 @@ Thomas-Brinkhoff Traffic Generator <http://iapg.jade-hs.de/personen/brinkhoff/ge
 ## Related Papers
 
 Mohamed F. Mokbel, Jie Bao, Ahmed Eldawy, Amr Magdy, Louai Alarabi, Mohamed Sarwat, Ethan Waytas, and Steven Yackel. 
-A Demonstration of MNTG - A Large-Scale GeoSpatial Road Network Traffic Generator. 
+"A Demonstration of MNTG - A Large-Scale GeoSpatial Road Network Traffic Generator." 
 ICDE 2014
 
 
 Mohamed F. Mokbel, Jie Bao, Ahmed Eldawy, Amr Magdy, Louai Alarabi, Mohamed Sarwat, Ethan Waytas, and Steven Yackel. 
-MNTG: An Extensible Web-based Traffic Generator.
+"MNTG: An Extensible Web-based Traffic Generator."
 SSTD 2013
 
 
 Christian Duntgen, Thomas Behr, Ralf Hartmut Guting. BerlinMOD: A Benchmark for Moving Object Databases.
 The VLDB Journal 18:6 (2009), 1335-1368.
 
-Thomas Brinkhoff , Ofener Str. A Framework for Generating Network-Based Moving Objects 
+Thomas Brinkhoff , Ofener Str. "A Framework for Generating Network-Based Moving Objects." 
 Geoinformatica Volume 6, 2002 
 
 ## How to Get?
