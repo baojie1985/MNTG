@@ -16,8 +16,9 @@ Ethan Waytas
 
 
 ## Related Links
-BerlinMod Traffic Generator
-Thomas-Brinkhoff Traffic Generator
+BerlinMod Traffic Generator <http://dna.fernuni-hagen.de/secondo/BerlinMOD/BerlinMOD.html>
+
+Thomas-Brinkhoff Traffic Generator <http://iapg.jade-hs.de/personen/brinkhoff/generator/>
 
 
 ## Related Papers
